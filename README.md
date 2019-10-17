@@ -1,2 +1,1 @@
-# tanbir.github.io
-Homepage of Tanbir Ahmed
+# Homepage of Tanbir Ahmed
