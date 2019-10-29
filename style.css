@@ -8,6 +8,35 @@ font_berkshire_swash{
   color: #007BBF;				       
   text-shadow: 1px 1px 0px #ededed, 1px 1px 0px rgba(0,0,200,0.15);
 }
+
+H1
+{
+  font_berkshire_swash{
+  font: 700 30px 'Barlow Condensed', Helvetica, sans-serif;
+  color: #007BBF;				       
+  text-shadow: 1px 1px 0px #ededed, 1px 1px 0px rgba(0,0,200,0.15);
+
+}
+
+H2
+{
+  font_berkshire_swash{
+  font: 700 25px 'Barlow Condensed', Helvetica, sans-serif;
+  color: #007BBF;				       
+  text-shadow: 1px 1px 0px #ededed, 1px 1px 0px rgba(0,0,200,0.15);
+}
+	
+H3
+{
+  font_berkshire_swash{
+  font: 700 20px 'Barlow Condensed', Helvetica, sans-serif;
+  color: #007BBF;				       
+  text-shadow: 1px 1px 0px #ededed, 1px 1px 0px rgba(0,0,200,0.15);
+
+}
+	
+	
+	
 font_r1e{
   font: 100 13px/1.3 'PT Serif', Helvetica, sans-serif;
   color: #212121;
