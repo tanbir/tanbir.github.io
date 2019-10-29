@@ -1,4 +1,28 @@
-body
+font_lobster_two{
+  font: 700 45px 'Barlow Condensed', Helvetica, sans-serif;
+  color: #007BBF;				       
+  text-shadow: 1px 1px 0px #ededed, 1px 1px 0px rgba(0,0,200,0.15);
+}
+font_berkshire_swash{
+  font: 700 30px 'Barlow Condensed', Helvetica, sans-serif;
+  color: #007BBF;				       
+  text-shadow: 1px 1px 0px #ededed, 1px 1px 0px rgba(0,0,200,0.15);
+}
+font_r1e{
+  font: 100 13px/1.3 'PT Serif', Helvetica, sans-serif;
+  color: #212121;
+  text-shadow: 1px 1px 0px #ededed, 1px 1px 0px rgba(0,0,0,0.15);
+}
+a
 {
-   font: 100 25/1.3 "Barlow Condensed";   
+	text-decoration:none;
+}
+b
+{
+	font: 400;
+}			       
+td
+{
+  font: 100 20px 'Barlow Condensed', Helvetica, sans-serif;
+  color: #212121;  
 }
