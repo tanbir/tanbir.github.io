@@ -1,1 +1,49 @@
 
+<html>
+<head>
+	<title> Welcome to the Homepage of Tanbir Ahmed! </title>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+  <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet'>
+ 	<link href='https://fonts.googleapis.com/css?family=Barlow Condensed' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
+ 	<link href='https://fonts.googleapis.com/css?family=Encode Sans Condensed' rel='stylesheet'>
+  <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=PT+Serif:400' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=PT+Serif:400italic' rel=stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Simonetta' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<meta charset="UTF-8">
+													      
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}});</script>
+</head>
+
+<body>
+                                                                                                
+- **Layers:** Let $\ell_0, \ell_1, \ldots, \ell_L$ be the layers where 
+    - $\ell_0$ represents the input layer, 
+    - $\ell_1, \ell_2, \ldots, \ell_{L-1}$ represent the hidden layers, and
+    - $\ell_L$ represents the output layer.
+    
+    Let $h_i$ denote the height of the layer $\ell_i$ for $i=0, 1, \ldots, L$
+    
+
+- **Biases:** $b^{(i)} \in {\mathbb R}^{h_i}$ for the layer $\ell_i$ with $i=1, 2, \ldots, L$
+    - $b^{(i)}_j \in {\mathbb R}$: bias for the $j$-th neuron of $\ell_i$  
+
+- **Weights:** $w^{(i)} \in {\mathbb R}^{h_{i-1}\times h_{i}}$ for the layer $\ell_i$ with $i=1, 2, \ldots, L$
+    - $w^{(i)}_{jk}\in {\mathbb R}$: weight from the $j$-th neuron of $\ell_{i-1}$ to the $k$-th neuron of $\ell_i$ 
+    
+- **Layer outputs:** $z^{(i)} \in {\mathbb R}^{h_i}$ for the layer $\ell_i$ with $i=1, 2, \ldots, L$ is defined as follows:    
+    - $z^{(1)} = \left(w^{(1)}\right)^T\cdot x + b^{(1)}$ where $x\in{\mathbb R}^{h_{i-1}}$ is the input vector
+    - $z^{(i)} = \left(w^{(i)}\right)^T\cdot a^{(i-1)} + b^{(i)}$ for $i=2,3,\ldots,L$ where $a^{(i)}$ is defined as below
+
+- **Layer output activations:** $a^{(i)}\in {\mathbb R}^{h_i}$ for the layer $\ell_i$ with $i=0, 1, 2, \ldots, L$ is defined as follows:    
+    - $a^{(0)}\in {\mathbb R}^{h_0}$ is initialized to the input vector $x$, and  
+    - $a^{(i)}=\sigma(z^{(i)})$ for $i=1,2, \ldots,L$ with some activation function $\sigma$ (we discuss activation functions later)
+- **Output of the network:** $a^{(L)} \in {\mathbb R}^{h_L}$                                                                                                
+                                                                                                
+</body>                                                                                                                                                                                              
+</html>
