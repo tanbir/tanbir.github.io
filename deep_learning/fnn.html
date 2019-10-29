@@ -29,12 +29,16 @@
 	<tr><td><H2>1. Layers, Input and Parameters</H2></td></tr>                                                                                                
 	<tr><td>
 	<b>Layers:</b> Let $\ell_0, \ell_1, \ldots, \ell_L$ be the layers where <br>
-	&nbsp; 	- $\ell_0$ represents the input layer, <br>
-    	&nbsp;	- $\ell_1, \ell_2, \ldots, \ell_{L-1}$ represent the hidden layers, and <br>
-    	&nbsp;	- $\ell_L$ represents the output layer. <br><br>
+	<ul>													      
+		<li>	$\ell_0$ represents the input layer, <br>
+    		<li>	$\ell_1, \ell_2, \ldots, \ell_{L-1}$ represent the hidden layers, and <br>
+    		<li> 	$\ell_L$ represents the output layer. <br><br>
+	</ul>												      
+	Let $h_i$ denote the height of the layer $\ell_i$ for $i=0, 1, \ldots, L$ <br>													      
+    	
+	<b>Biases:</b> $b^{(i)} \in {\mathbb R}^{h_i}$ for the layer $\ell_i$ with $i=1, 2, \ldots, L$ <br>
+    	&nbsp; 	- $b^{(i)}_j \in {\mathbb R}$: bias for the $j$-th neuron of $\ell_i$  													      
 													      
-	&nbsp;	Let $h_i$ denote the height of the layer $\ell_i$ for $i=0, 1, \ldots, L$ <br>													      
-    													      
 	</td></tr>												      
   </table>
 </td></tr></table>													     
