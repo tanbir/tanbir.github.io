@@ -1,2 +1,0 @@
-# Homepage of Tanbir Ahmed 
-
