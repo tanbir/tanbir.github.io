@@ -29,7 +29,13 @@ H3
   color: #007BBF;				       
   text-shadow: 1px 1px 0px #ededed, 1px 1px 0px rgba(0,0,200,0.15);
 }
-	
+
+H4
+{
+  font: 700 20px 'Barlow Condensed', Helvetica, sans-serif;
+  color: #007BBF;				       
+  text-shadow: 1px 1px 0px #ededed, 1px 1px 0px rgba(0,0,200,0.15);
+}	
 	
 	
 font_r1e{
