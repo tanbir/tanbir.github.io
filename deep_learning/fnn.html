@@ -331,8 +331,15 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 	</td></tr>
 													      
 	<tr><td><H4>3.5 Adamax (a varient of Adam) algorithm</H4></td></tr>
-	<tr><td><H4>3.6 Nadam (a varient of Adam) algorithm</H4></td></tr>													      
-	<tr><td><H4>3.7 AMSGrad (a varient of Adam) algorithm</H4></td></tr>													      
+	<tr><td><H4>3.6 Nadam (a varient of Adam) algorithm</H4></td></tr>													      	
+	<tr><td><H4>3.7 AMSGrad (a varient of Adam) algorithm</H4></td></tr>
+	<tr><td>												   
+		The second moments are computed as follows:
+		\begin{eqnarray}
+		v_t^{(w,i)} &=& \max(v_{t-1}^{(w,i)}, \beta_2 v_{t-1}^{(w,i)} + (1 - \beta_2) \left[\frac{\partial C}{\partial w_t^{(i)}}\right]^2) \\
+		v_t^{(b,i)} &=& \max(v_{t-1}^{(b,i)}, \beta_2 v_{t-1}^{(b,i)} + (1 - \beta_2) \left[\frac{\partial C}{\partial b_t^{(i)}}\right]^2) \\
+		\end{eqnarray}	
+	</td></tr>													      
 	<tr><td>
 													      
 	</td></tr>												      
