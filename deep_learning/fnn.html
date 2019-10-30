@@ -37,16 +37,21 @@
 	</ul>												      
 	Let $h_i$ denote the height of the layer $\ell_i$ for $i=0, 1, \ldots, L$ <br><br>													      
     	
-	<b>Biases:</b> Let for $i=1, 2, \ldots, L$ <br>
+	<b>Biases:</b> For $i=1, 2, \ldots, L$, let <br>
 	<ul>
 		<li> $b^{(i)} \in {\mathbb R}^{h_i}$ denote the bias for the layer $\ell_i$ and
 		<li> $b^{(i)}_j \in {\mathbb R}$ denote the bias for the $j$-th neuron of $\ell_i$
 	</ul>
-	<b>Weights:</b> Let for $i=1, 2, \ldots, L$ <br>
+	<b>Weights:</b> For $i=1, 2, \ldots, L$, let <br>
 	<ul>
 		<li> $w^{(i)} \in {\mathbb R}^{h_{i-1}\times h_{i}}$ denote the weight for the layer $\ell_i$ and
     		<li> $w^{(i)}_{jk}\in {\mathbb R}$ denote the weight from the $j$-th neuron of $\ell_{i-1}$ to the $k$-th neuron of $\ell_i$  													      
-	</ul>												      
+	</ul>
+	<b>Layer outputs:</b> For $i=1, 2, \ldots, L$, $z^{(i)} \in {\mathbb R}^{h_i}$ for the layer $\ell_i$ be defined as follows:<br>    
+    	<ul>
+		<li>$z^{(1)} = \left(w^{(1)}\right)^T\cdot x + b^{(1)}$ where $x\in{\mathbb R}^{h_{i-1}}$ is the input vector
+        	<li>$z^{(i)} = \left(w^{(i)}\right)^T\cdot a^{(i-1)} + b^{(i)}$ for $i=2,3,\ldots,L$ where $a^{(i)}$ is defined as below
+	</ul>
 	</td></tr>												      
   </table>
 </td></tr></table>													     
