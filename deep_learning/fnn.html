@@ -277,10 +277,12 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 	Let $\beta_1$ and $\beta_2$, with $0<\beta_1<1$ and $0<\beta_2<1$ both generally close to $1$, denote the decay rates for $m_t$ and $v_t$ respectively.<br><br>
 	</td></tr>
 	<tr><td><H5>References</H5></td></tr>
+	<tr><td>												      
 	<ul>
 	     	<li> Diederik Kingma, Jimmy Ba, <a href=https://arxiv.org/abs/1412.6980v8 target=blank>Adam: A Method for Stochastic Optimization</a>
 		<li> Sashank J. Reddi, Satyen Kale, Sanjiv Kumar, <a href=https://openreview.net/forum?id=ryQu7f-RZ target=blank>On the Convergence of Adam and Beyond</a>
 	</ul>
+	</td></tr>												      
 	<tr><td><H5>3.4.1 Computation of the moments</H5></td></tr>
 	<tr><td>
 	At iteration $t\geq 0$ of updates, let 
@@ -309,7 +311,7 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 		\end{eqnarray}
 	</td></tr>
 													      	
-	<tr><td><H5>3.6.3 Updating parameters</H5></td></tr>
+	<tr><td><H5>3.4.3 Updating parameters</H5></td></tr>
 	<tr><td>
 		\begin{eqnarray}
 		w^{(i)}_{t+1} &=& w^{(i)}_{t} - \eta_t\frac{{\hat m}^{(w,i)}_t}{\sqrt{{\hat v}^{(w,i)}_t} + \epsilon}  \\
