@@ -175,9 +175,9 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 	\end{eqnarray}$$
 
 	where $\eta$ is the hyperparameter representing the learning-rate of the training. The learning rate $\eta$ (typically between $0.0$ and $1.0$) is perhaps the most important  hyperparameter to be tuned in a neural network. It determines the proportion of errors to be used to update the parameters of the model and controls the speed of learning. <br><br>
-
+	</td></tr>
 	<tr><td><H5>3.1.1 Scheduling the Learning Rate </H5></td></tr>
-
+	<tr><td>
 	Smaller learning rate requires more training epochs. Large learning rate may converge fast but only to a suboptimal solution. So it is a good idea to decay the learning rate as the algorithm moves from update to update. Let $\eta_t$ denotes the learning rate at the $t$-th update. The general rule of convergance is
 	$\sum_{t=1}^\infty\eta_{t} = \infty$ and $\sum_{t=1}^\infty\eta_{t}^2 < \infty$. The learning rate may be decayed using some strategy. We use the following strategy:
 
