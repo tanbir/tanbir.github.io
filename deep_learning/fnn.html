@@ -61,7 +61,42 @@
 	</td></tr>												      
 	<tr><td><H3>2. Computation of Errors</H3></td></tr>													      
 	<tr><td>												      
-	The most common optimization algorithms used in neural networks are different varients of Gradient Descent (GD) where the objective function is a cost function  CC  that we want to minimize.													      													      
+	The most common optimization algorithms used in neural networks are different varients of Gradient Descent (GD) where the objective function is a cost function  CC  that we want to minimize.<br>
+	<b>Cost function:</b> Let $C$ be some differentiable cost function (we discuss cost functions later)<br>
+	<b>Error in output:</b> For $j\in\{1, 2, \ldots, h_L\}$ 
+
+	    $$\begin{eqnarray*}
+	    \delta^{(L)}_j &=& {\partial C}/{\partial z^{(L)}_j} 
+		 = \sum_k\left({\partial C}/{\partial a^{(L)}_k}\right) \left({\partial a^{(L)}_k}/{\partial z^{(L)}_j}\right)   
+		 = \left({\partial C}/{\partial a^{(L)}_j}\right) \left({\partial a^{(L)}_j}/{\partial z^{(L)}_j}\right) 
+	    \end{eqnarray*}$$
+    
+    	Hence, error in the output layer:
+	    $$\begin{eqnarray*}
+	    \delta^{(L)} &=& 
+		  \begin{bmatrix}
+		   {\partial C}/{\partial z^{(L)}_1} \\
+		   {\partial C}/{\partial z^{(L)}_2} \\
+		    \cdots \\
+		   {\partial C}/{\partial z^{(L)}_{h_L}} 
+		   \end{bmatrix}
+		  =
+			 \begin{bmatrix}
+			 {\partial C}/{\partial a^{(L)}_1} \\
+			{\partial C}/{\partial a^{(L)}_2} \\
+			\cdots \\
+			{\partial C}/{\partial a^{(L)}_{h_L}}
+			\end{bmatrix}
+			\odot 
+			\begin{bmatrix}
+			{\partial a^{(L)}_1}/{\partial z^{(L)}_1} \\
+			{\partial a^{(L)}_2}/{\partial z^{(L)}_2} \\
+			\cdots \\
+			{\partial a^{(L)}_{h_L}}/{\partial z^{(L)}_{h_L}}
+			\end{bmatrix}                
+			=  \nabla_a{C}\odot \sigma^{\prime}(z^{(L)})
+	    \end{eqnarray*}$$													      
+													      
 	</td></tr>											
   </table>
 </td></tr></table>													     
