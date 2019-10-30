@@ -184,7 +184,7 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 
 	$$\eta_t = {\text{Initial learning rate} \over 1.0 + (\text{decay} * t)}$$
 
-	For layer $i=L, L-1, L-2, ..., 2, 1$,
+	For layer $i=L-1, L-2, ..., 2, 1$,
 
 
 	$$\begin{eqnarray}
@@ -195,7 +195,7 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 	<tr><td><H5>3.1.2 Adding Momentum</H5></td></tr>
 	<tr><td>
 	Momentum in Physics means mass times velocity. In SGD, we consider unit mass, and so momentum adds speed and direction in the update procedure. To update the parameters, instead of only depending on the current gradient, we may depend on the exponentially weighted average of the current and past gradients. 
-	For layer $i=L, L-1, L-2, ..., 1$, with $v_t^{(w,i)}$ and $v_t^{(b,i)}$ both initialized to zero, 
+	For layer $i=L-1, L-2, ..., 1$, with $v_t^{(w,i)}$ and $v_t^{(b,i)}$ both initialized to zero, 
 
 	\begin{eqnarray}
 	v_t^{(w,i)} &=& \alpha v_{t-1}^{(w,i)} - \eta_t \left[\frac{\partial C}{\partial w_t^{(i)}}\right] \\
