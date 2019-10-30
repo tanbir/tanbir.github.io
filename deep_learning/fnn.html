@@ -191,9 +191,9 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 	w_{t+1}^{(i)} &=& w_t^{(i)} - \eta_t \left[\frac{\partial C}{\partial w_t^{(i)}}\right] \\
 	b_{t+1}^{(i)} &=& b_t^{(i)} - \eta_t \left[\frac{\partial C}{\partial b_t^{(i)}}\right]
 	\end{eqnarray}$$
-
+	</td></tr>
 	<tr><td><H5>3.1.2 Adding Momentum</H5></td></tr>
-
+	<tr><td>
 	Momentum in Physics means mass times velocity. In SGD, we consider unit mass, and so momentum adds speed and direction in the update procedure. To update the parameters, instead of only depending on the current gradient, we may depend on the exponentially weighted average of the current and past gradients. 
 	For layer $i=L, L-1, L-2, ..., 1$, with $v_t^{(w,i)}$ and $v_t^{(b,i)}$ both initialized to zero, 
 
@@ -207,7 +207,7 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 	b_{t+1}^{(i)} &=& b_t^{(i)} + v_t^{(b,i)}
 	\end{eqnarray}
 
-	Here $\alpha$ is the momentum hyperparameter. The larger the value of $\alpha$ than the learning rate $\eta$, the more previous gradients affect the current direction. Momentum accelerates the advancement in the direction of the gradient. A typical value of $\alpha$ is $0.9$. For $\alpha=0.9$, the speed is asympototically 10 times faster than the standard SGD.													      
+	Here $\alpha$ is the momentum hyperparameter. The larger the value of $\alpha$ than the learning rate $\eta$, the more previous gradients affect the current direction. Momentum accelerates the advancement in the direction of the gradient. A typical value of $\alpha$ is $0.9$. For $\alpha=0.9$, the speed is asympototically 10 times faster than the standard SGD.<br><br>
 	</td></tr>																								      
   </table>
 </td></tr></table>													     
