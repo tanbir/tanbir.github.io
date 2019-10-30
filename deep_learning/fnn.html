@@ -271,7 +271,7 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 	Keras uses $\eta=0.001$, $\epsilon=10^{-6}$ and $\rho=0.9$ <br><br>
 	</td></tr>
 													      
-	<tr><td><H4>3.6 Adam algorithm</H4></td></tr>
+	<tr><td><H4>3.4 Adam algorithm</H4></td></tr>
 	<tr><td>
 	Adaptive Moment (Adam) estimation considers both the running average of past gradients and the running average of past squared gradients. Let on iteration $t$ of updates, $m_t$ and $v_t$ denote, respectively the first moment (mean) and the second moment (uncentered variance) of gradients. 
 	Let $\beta_1$ and $\beta_2$, with $0<\beta_1<1$ and $0<\beta_2<1$ both generally close to $1$, denote the decay rates for $m_t$ and $v_t$ respectively.<br><br>
@@ -281,7 +281,7 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 	     	<li> Diederik Kingma, Jimmy Ba, <a href=https://arxiv.org/abs/1412.6980v8 target=blank>Adam: A Method for Stochastic Optimization</a>
 		<li> Sashank J. Reddi, Satyen Kale, Sanjiv Kumar, <a href=https://openreview.net/forum?id=ryQu7f-RZ target=blank>On the Convergence of Adam and Beyond</a>
 	</ul>
-	<tr><td><H5>3.6.1 Computation of the moments</H5></td></tr>
+	<tr><td><H5>3.4.1 Computation of the moments</H5></td></tr>
 	<tr><td>
 	At iteration $t\geq 0$ of updates, let 
 	<ul>	
@@ -298,6 +298,24 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 
 	where $m_0^{(w,i)}$, $m_0^{(b,i)}$, $v_0^{(w,i)}$ and $v_0^{(b,i)}$ are all initialized to zero-vectors.<br><br>												      
 	</td></tr>												      
+	<tr><td><H5>3.4.2 Bias correction of $m_t$ and $v_t$</H5></td></tr>
+	<tr><td>
+		Since $m_t$ and $v_t$ are initialized to zero-vectors, these are biased towards zero. 
+		The bias-corrected moments are computed as follows: 
+
+		\begin{eqnarray}
+		{\hat m}_t^{(w,i)} &=& \frac{m^{(w,i)}_t}{1.0 - \beta_1^t}\\
+		{\hat v}_t^{(w,i)} &=& \frac{v^{(w,i)}_t}{1.0 - \beta_2^t}
+		\end{eqnarray}
+	</td></tr>
+													      	
+	<tr><td><H5>3.6.3 Updating parameters</H5></td></tr>
+	<tr><td>
+		\begin{eqnarray}
+		w^{(i)}_{t+1} &=& w^{(i)}_{t} - \eta_t\frac{{\hat m}^{(w,i)}_t}{\sqrt{{\hat v}^{(w,i)}_t} + \epsilon}  \\
+		b^{(i)}_{t+1} &=& b^{(i)}_{t} - \eta_t\frac{{\hat m}^{(b,i)}_t}{\sqrt{{\hat v}^{(b,i)}_t} + \epsilon}  \\
+		\end{eqnarray}
+	</td></tr>													      
   </table>
 </td></tr></table>													     
 </body>                                                                                                  
