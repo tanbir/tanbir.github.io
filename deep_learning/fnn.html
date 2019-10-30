@@ -246,6 +246,30 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 
 	Adagrad would converge rapidly on a convex function. On a non-convex function it may eventually arrive at a convex region unless the learning rate became too small before that happens. The $\epsilon$ in the denominator is to avoid divide-by-zero errors. Keras uses $\eta=0.01$ and $\epsilon=10^{-7}$. <br><br>
 	</td></tr>												      
+      	<tr><td><H4>3.3 RMSprop algorithm</H4></td></tr>
+	<tr><td>
+		RMSprop (Root Mean Square propagation) improves Adagrad by replacing cumulative sum of squared gradients with an exponentially decaying average of squared gradients. The idea is to discard history from distant past and converge once in a convex region. <br><br>
+	</td></tr>
+	<tr><td><H5>3.3.1 Computing exponentially decaying average of squared gradients</H5></td></tr>
+	<tr><td>
+	For layer $i=L-1, L-2, ..., 1$,
+
+	\begin{eqnarray}
+	v_t^{(w,i)} &=& \rho v_{t-1}^{(w,i)} + (1 - \rho) \left[\frac{\partial C}{\partial w_t^{(i)}}\right]^2 \\
+	v_t^{(b,i)} &=& \rho v_{t-1}^{(b,i)} + (1 - \rho) \left[\frac{\partial C}{\partial b_t^{(i)}}\right]^2 \\
+	\end{eqnarray}
+
+	where $v_0^{(w,i)}$ and $r_0^{(b,i)}$ both initialized to zero.<br><br>
+	</td></tr>
+	<tr><td><H5>3.3.2 Updating parameters</H5></td></tr>
+	<tr><td>
+	\begin{eqnarray}
+	w_{t+1}^{(i)} &=& w_t^{(i)} - \frac{\eta_t}{\sqrt{{v}_t^{(w,i)} + \epsilon}} \left[\frac{\partial C}{\partial w_t^{(i)}}\right] \\
+	b_{t+1}^{(i)} &=& b_t^{(i)} - \frac{\eta_t}{\sqrt{{v}_t^{(b,i)} + \epsilon}} \left[\frac{\partial C}{\partial b_t^{(i)}}\right]
+	\end{eqnarray}
+
+	Keras uses $\eta=0.001$, $\epsilon=10^{-6}$ and $\rho=0.9$ <br><br>
+	</td></tr>
   </table>
 </td></tr></table>													     
 </body>                                                                                                  
