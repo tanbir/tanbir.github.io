@@ -149,6 +149,33 @@ Further simplifying, $$\begin{eqnarray}
 
 Since above error-calculations are for a single input $x$. Let us extend our notation to incorporate the inputs. Let $\delta^{(x, i)}$ denote the error in layer $i$ on input $x$. Similarly, we extend the notation of $a{(i)}$ to $a^{(x,i)}$ for layer $i$.
 	</td></tr>											
+													      
+	<tr><td><H3>3. Optimization Algorithms for Gradient Descent</H3></td></tr>													      
+	<tr><td><H4>3.1. Stochastic Gradient Descent</H4></td></tr>													      													      
+	<tr><td>												      													      
+	The standard <b>Batch Gradient Descent</b> algorithm uses $m$ to be equal to the size of the entire training dataset. 
+	In this case, the errors are less noisy but the convergence is slow (since updating of parameters is less frequent) and 
+	impractical if the dataset is big. The <b>Stochastic Gradient Descent (SGD)</b> algorithm uses $m$ to be 1 corresponding 
+	to a single randomly picked example from the training dataset. In this case, the convergence is faster (since updating 
+	of parameters is more frequent), but the error is noisier which in turn helps to escape shallow local minima more easily.  
+	A more practical approach, known as <b>Mini-batch Gradient Descent</b>, is to combine the best of both the varients 
+	and take $m$ to be equal to a small number greater than 1. An <b>epoch</b> is passing of all the training examples 
+	through the neural network. It is important that the training dataset be shuffled at the beginning of each epoch for 
+	randomness of the example(s) picked in both SGD and Mini-Batch algorithms. <br><br>
+
+	Let the size of training dataset and a minibatch be respectively $M$ and $m$. Let $w_t^{(i)}$ and $b_t^{(i)}$ denote the weights $w^{(i)}$ and biases $b^{(i)}$ after update iteration $t$ with $t\geq 0$.  For $i=L, L-1, L-2, ..., 1$, the grdients are
+	$$\begin{eqnarray}
+	\frac{\partial C}{\partial w_t^{(i)}} &=&  {1\over m}\sum_x\delta^{(x, i)}\left(a^{(x, i-1)}\right)^T \\
+	\frac{\partial C}{\partial b_t^{(i)}} &=&  {1\over m}\sum_x\delta^{(x, i)}\\
+	\end{eqnarray}$$
+	The weights are updated as follows:
+	$$\begin{eqnarray}
+	w_{t+1}^{(i)} &=& w_t^{(i)} - \eta \left[\frac{\partial C}{\partial w_t^{(i)}}\right] \\
+	b_{t+1}^{(i)} &=& b_t^{(i)} - \eta \left[\frac{\partial C}{\partial b_t^{(i)}}\right]
+	\end{eqnarray}$$
+
+	where $\eta$ is the hyperparameter representing the learning-rate of the training. The learning rate $eta$ (typically between $0.0$ and $1.0$) is perhaps the most important  hyperparameter to be tuned in a neural network. It determines the proportion of errors to be used to update the parameters of the model and controls the speed of learning. 											      
+	</td></tr>																								      
   </table>
 </td></tr></table>													     
 </body>                                                                                                  
