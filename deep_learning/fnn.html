@@ -301,7 +301,7 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 		<li> $m_t^{(w,i)}$ and $m_t^{(b,i)}$ denote $m_t$ with respect to $w_t^{(i)}$ and $b_t^{(i)}$, respectively
 		<li> $v_t^{(w,i)}$ and $v_t^{(b,i)}$ denote $v_t$ with respect to $w_t^{(i)}$ and $b_t^{(i)}$, respectively. 
 	</ul>
-
+	The moments are computed as follows:
 	\begin{eqnarray}
 	m_t^{(w,i)} &=& \beta_1 m_{t-1}^{(w,i)} + (1 - \beta_1) \left[\frac{\partial C}{\partial w_t^{(i)}}\right] \\
 	m_t^{(b,i)} &=& \beta_1 m_{t-1}^{(b,i)} + (1 - \beta_1) \left[\frac{\partial C}{\partial b_t^{(i)}}\right] \\
@@ -328,7 +328,14 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 		w^{(i)}_{t+1} &=& w^{(i)}_{t} - \eta_t\frac{{\hat m}^{(w,i)}_t}{\sqrt{{\hat v}^{(w,i)}_t} + \epsilon}  \\
 		b^{(i)}_{t+1} &=& b^{(i)}_{t} - \eta_t\frac{{\hat m}^{(b,i)}_t}{\sqrt{{\hat v}^{(b,i)}_t} + \epsilon}  \\
 		\end{eqnarray}
-	</td></tr>													      
+	</td></tr>
+													      
+	<tr><td><H5>3.5 Adamax (a varient of Adam) algorithm</H5></td></tr>
+	<tr><td><H5>3.6 Nadam (a varient of Adam) algorithm</H5></td></tr>													      
+	<tr><td><H5>3.7 AMSGrad (a varient of Adam) algorithm</H5></td></tr>													      
+	<tr><td>
+													      
+	</td></tr>												      
   </table>
 </td></tr></table>													     
 </body>                                                                                                  
