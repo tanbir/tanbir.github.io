@@ -217,6 +217,33 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 	b_{t+1}^{(i)} &=& b_t^{(i)} + \alpha v_{t}^{(b,i)} - \eta_t \left[\frac{\partial C}{\partial b_t^{(i)}}\right]
 	\end{eqnarray}													      
 	</td></tr>													      
+													      
+	<tr><td><H4>3.3 Adagrad (Adaptive Gradient) algorithm</H5></td></tr>
+	<tr><td>
+	In this algorithm, the learning rate is updated by dividing it by the square-root of the cumulative sum of current and past squared gradients. The learning rate of a parameter decreases faster if the partial derivative of the cost (loss) with respect to that parameter is larger. Excess decrease of learning rate may occur due to cumulative sum of gradients. 
+
+ 	### References
+	- J. Duchi, E. Hazan, Y. Singer, [Adaptive Subgradient Methods for Online Learning and Stochastic Optimization](http://www.jmlr.org/papers/volume12/duchi11a/duchi11a.pdf), JMLR, **12** (2011) 2121-2159
+	</td></tr>
+
+### 3.3.1 Computing sum of squares of historic gradients
+On update $t$ (with $t\geq 1$), for layer $i=L, L-1, L-2, ..., 1$, 
+\begin{eqnarray}
+s_t^{(w, i)} &=& s_{t-1}^{(w,i)} + \left[\frac{\partial C}{\partial w_t^{(i)}}\right]^2 \\
+s_t^{(w, i)} &=& s_{t-1}^{(b,i)} + \left[\frac{\partial C}{\partial b_t^{(i)}}\right]^2
+\end{eqnarray}
+
+with $s_0^{(w,i)}$ and $s_0^{(b,i)}$ both initialized to zero-vectors.
+
+### 3.3.2 Updating parameters
+
+\begin{eqnarray}
+w_{t+1}^{(i)} &=& w_t^{(i)} - \frac{\eta_t}{\sqrt{s_t^{(w,i)} + \epsilon}}\left[\frac{\partial C}{\partial w_t^{(i)}}\right]  \\
+b_{t+1}^{(i)} &=& b_t^{(i)} - \frac{\eta_t}{\sqrt{s_t^{(b,i)} + \epsilon}}\left[\frac{\partial C}{\partial b_t^{(i)}}\right]
+\end{eqnarray}
+
+Adagrad would converge rapidly on a convex function. On a non-convex function it may eventually arrive at a convex region unless the learning rate became too small before that happens. The $\epsilon$ in the denominator is to avoid divide-by-zero errors. Keras uses $\eta=0.01$ and $\epsilon=10^{-7}$. 													      
+													      
   </table>
 </td></tr></table>													     
 </body>                                                                                                  
