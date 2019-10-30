@@ -163,7 +163,7 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 	through the neural network. It is important that the training dataset be shuffled at the beginning of each epoch for 
 	randomness of the example(s) picked in both SGD and Mini-Batch algorithms. <br><br>
 
-	Let the size of training dataset and a minibatch be respectively $M$ and $m$. Let $w_t^{(i)}$ and $b_t^{(i)}$ denote the weights $w^{(i)}$ and biases $b^{(i)}$ after update iteration $t$ with $t\geq 0$.  For $i=L, L-1, L-2, ..., 1$, the grdients are
+	Let the size of training dataset and a minibatch be respectively $M$ and $m$. Let $w_t^{(i)}$ and $b_t^{(i)}$ denote the weights $w^{(i)}$ and biases $b^{(i)}$ after update iteration $t$ with $t\geq 0$.  For $i=L-1, L-2, ..., 1$, the grdients are
 	$$\begin{eqnarray}
 	\frac{\partial C}{\partial w_t^{(i)}} &=&  {1\over m}\sum_x\delta^{(x, i)}\left(a^{(x, i-1)}\right)^T \\
 	\frac{\partial C}{\partial b_t^{(i)}} &=&  {1\over m}\sum_x\delta^{(x, i)}\\
