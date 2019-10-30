@@ -117,6 +117,36 @@
      
      	Hence,
     		$$\delta^{(i)} = \left(w^{(i+1)}\cdot \delta^{(i+1)}\right)\odot \sigma^{\prime}(z^{(i)}).$$													      
+	- **Rate of change of $C$ with respect to any bias:** 
+\begin{eqnarray}  
+  \frac{\partial C}{\partial b^{(i)}_j} &=& {\partial C}/{\partial b^{(i)}_j} = \delta^{(i)}_j.
+\end{eqnarray}
+
+    Hence,
+\begin{eqnarray}  
+  \frac{\partial C}{\partial b^{(i)}} 
+		&=& \begin{bmatrix}
+                {\partial C}/{\partial b^{(i)}_1} \\
+                {\partial C}/{\partial b^{(i)}_2} \\
+                \cdots \\
+                {\partial C}/{\partial b^{(i)}_{h_i}}
+                \end{bmatrix}  \\
+		&=& \begin{bmatrix}
+                {\delta^{(i)}_1} \\
+                {\delta^{(i)}_2} \\
+                \cdots \\
+                {\delta^{(i)}_{h_i}}
+                \end{bmatrix} = \delta^{(i)}.
+	\end{eqnarray}
+<b>Rate of change of $C$ with respect to any weight:</b>
+$\begin{eqnarray}  
+  \frac{\partial C}{\partial w^{(i)}_{jk}} =  \delta^{(i)}_ka^{(i-1)}_j.
+\end{eqnarray}$
+Further simplifying, $\begin{eqnarray}  
+  \frac{\partial C}{\partial w^{(i)}} =  \delta^{(i)}\left(a^{(i-1)}\right)^T.
+\end{eqnarray}$
+
+Since above error-calculations are for a single input $x$. Let us extend our notation to incorporate the inputs. Let $\delta^{(x, i)}$ denote the error in layer $i$ on input $x$. Similarly, we extend the notation of $a{(i)}$ to $a^{(x,i)}$ for layer $i$.
 	</td></tr>											
   </table>
 </td></tr></table>													     
