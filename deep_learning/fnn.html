@@ -174,7 +174,40 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 	b_{t+1}^{(i)} &=& b_t^{(i)} - \eta \left[\frac{\partial C}{\partial b_t^{(i)}}\right]
 	\end{eqnarray}$$
 
-	where $\eta$ is the hyperparameter representing the learning-rate of the training. The learning rate $\eta$ (typically between $0.0$ and $1.0$) is perhaps the most important  hyperparameter to be tuned in a neural network. It determines the proportion of errors to be used to update the parameters of the model and controls the speed of learning. 											      
+	where $\eta$ is the hyperparameter representing the learning-rate of the training. The learning rate $\eta$ (typically between $0.0$ and $1.0$) is perhaps the most important  hyperparameter to be tuned in a neural network. It determines the proportion of errors to be used to update the parameters of the model and controls the speed of learning. <br><br>
+
+	<tr><td><H5>3.1.1 Scheduling the Learning Rate </H5></td></tr>
+
+	Smaller learning rate requires more training epochs. Large learning rate may converge fast but only to a suboptimal solution. So it is a good idea to decay the learning rate as the algorithm moves from update to update. Let $\eta_t$ denotes the learning rate at the $t$-th update. The general rule of convergance is
+	$\sum_{t=1}^\infty\eta_{t} = \infty$ and $\sum_{t=1}^\infty\eta_{t}^2 < \infty$. The learning rate may be decayed using some strategy. We use the following strategy:
+
+
+	$$\eta_t = {\text{Initial learning rate} \over 1.0 + (\text{decay} * t)}$$
+
+	For layer $i=L, L-1, L-2, ..., 2, 1$,
+
+
+	$$\begin{eqnarray}
+	w_{t+1}^{(i)} &=& w_t^{(i)} - \eta_t \left[\frac{\partial C}{\partial w_t^{(i)}}\right] \\
+	b_{t+1}^{(i)} &=& b_t^{(i)} - \eta_t \left[\frac{\partial C}{\partial b_t^{(i)}}\right]
+	\end{eqnarray}$$
+
+	<tr><td><H5>3.1.2 Adding Momentum</H5></td></tr>
+
+	Momentum in Physics means mass times velocity. In SGD, we consider unit mass, and so momentum adds speed and direction in the update procedure. To update the parameters, instead of only depending on the current gradient, we may depend on the exponentially weighted average of the current and past gradients. 
+	For layer $i=L, L-1, L-2, ..., 1$, with $v_t^{(w,i)}$ and $v_t^{(b,i)}$ both initialized to zero, 
+
+	\begin{eqnarray}
+	v_t^{(w,i)} &=& \alpha v_{t-1}^{(w,i)} - \eta_t \left[\frac{\partial C}{\partial w_t^{(i)}}\right] \\
+	v_t^{(b,i)} &=& \alpha v_{t-1}^{(b,i)} - \eta_t \left[\frac{\partial C}{\partial b_t^{(i)}}\right] \\
+	\end{eqnarray}
+
+	\begin{eqnarray}
+	w_{t+1}^{(i)} &=& w_t^{(i)} + v_t^{(w,i)} \\
+	b_{t+1}^{(i)} &=& b_t^{(i)} + v_t^{(b,i)}
+	\end{eqnarray}
+
+	Here $\alpha$ is the momentum hyperparameter. The larger the value of $\alpha$ than the learning rate $\eta$, the more previous gradients affect the current direction. Momentum accelerates the advancement in the direction of the gradient. A typical value of $\alpha$ is $0.9$. For $\alpha=0.9$, the speed is asympototically 10 times faster than the standard SGD.													      
 	</td></tr>																								      
   </table>
 </td></tr></table>													     
