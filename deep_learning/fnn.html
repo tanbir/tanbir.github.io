@@ -283,11 +283,10 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 	</ul>
 	<tr><td><H5>3.6.1 Computation of the moments</H5></td></tr>
 	<tr><td>
-	At iteration $t$ of updates, let 
-	<ul>
-	<li> $w_t^{(i)}$ and $b_t^{(i)}$ denote the weights and biases associated with layer $\ell_i$ 
-	<li> $m_t^{(w,i)}$ and $m_t^{(b,i)}$ denote $m_t$ with respect to $w_t^{(i)}$ and $b_t^{(i)}$, respectively
-	<li> $v_t^{(w,i)}$ and $v_t^{(b,i)}$ denote $v_t$ with respect to $w_t^{(i)}$ and $b_t^{(i)}$, respectively. 
+	At iteration $t\geq 0$ of updates, let 
+	<ul>	
+		<li> $m_t^{(w,i)}$ and $m_t^{(b,i)}$ denote $m_t$ with respect to $w_t^{(i)}$ and $b_t^{(i)}$, respectively
+		<li> $v_t^{(w,i)}$ and $v_t^{(b,i)}$ denote $v_t$ with respect to $w_t^{(i)}$ and $b_t^{(i)}$, respectively. 
 	</ul>
 
 	\begin{eqnarray}
@@ -297,7 +296,7 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 	v_t^{(b,i)} &=& \beta_2 v_{t-1}^{(b,i)} + (1 - \beta_2) \left[\frac{\partial C}{\partial b_t^{(i)}}\right]^2 \\
 	\end{eqnarray}
 
-	where $m_0^{(w,i)}$, $m_0^{(b,i)}$, $v_0^{(w,i)}$ and $v_0^{(b,i)}$ are all initialized to zero-vectors.												      
+	where $m_0^{(w,i)}$, $m_0^{(b,i)}$, $v_0^{(w,i)}$ and $v_0^{(b,i)}$ are all initialized to zero-vectors.<br><br>												      
 	</td></tr>												      
   </table>
 </td></tr></table>													     
