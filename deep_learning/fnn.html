@@ -252,6 +252,15 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 	<tr><td>
 		RMSprop (Root Mean Square propagation) improves Adagrad by replacing cumulative sum of squared gradients with an exponentially decaying average of squared gradients. The idea is to discard history from distant past and converge once in a convex region. <br><br>
 	</td></tr>
+													      
+	<tr><td><H5>References</H5></td></tr> 	
+	<tr><td>
+	<ul>													      
+		<li> <a href=http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf target=blank>
+			rmsprop: Divide the gradient by a running average of its recent magnitude</a>
+	</ul>													   
+	</td></tr>
+													      
 	<tr><td><H5>3.3.1 Computing exponentially decaying average of squared gradients</H5></td></tr>
 	<tr><td>
 	For layer $i=L-1, L-2, ..., 1$,
