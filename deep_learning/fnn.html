@@ -29,41 +29,41 @@
 	<tr><td><H2>Data Structure</H2></td></tr>												      
 	<tr><td><H3>1. Layers and Parameters</H3></td></tr>                                                                                                
 	<tr><td>
-	<b>Layers:</b> Let $\ell_0, \ell_1, \ldots, \ell_L$ be the layers where <br>
+	<b>Layers:</b> Let $\ell_0, \ell_1, \ldots, \ell_{L-1}$ be the layers where <br>
 	<ul>													      
 		<li>	$\ell_0$ represents the input layer, 
-    		<li>	$\ell_1, \ell_2, \ldots, \ell_{L-1}$ represent the hidden layers, and 
-    		<li> 	$\ell_L$ represents the output layer. 
+    		<li>	$\ell_1, \ell_2, \ldots, \ell_{L-2}$ represent the hidden layers, and 
+    		<li> 	$\ell_{L-1}$ represents the output layer. 
 	</ul>												      
-	Let $h_i$ denote the height of the layer $\ell_i$ for $i=0, 1, \ldots, L$ <br><br>													      
+	Let $h_i$ denote the height of the layer $\ell_i$ for $i=0, 1, \ldots, L-1$ <br><br>													      
     	
-	<b>Biases:</b> For $i=1, 2, \ldots, L$, let <br>
+	<b>Biases:</b> For $i=1, 2, \ldots, L-1$, let <br>
 	<ul>
 		<li> $b^{(i)} \in {\mathbb R}^{h_i}$ denote the bias for the layer $\ell_i$ and
 		<li> $b^{(i)}_j \in {\mathbb R}$ denote the bias for the $j$-th neuron of $\ell_i$
 	</ul>
-	<b>Weights:</b> For $i=1, 2, \ldots, L$, let <br>
+	<b>Weights:</b> For $i=1, 2, \ldots, L-1$, let <br>
 	<ul>
 		<li> $w^{(i)} \in {\mathbb R}^{h_{i-1}\times h_{i}}$ denote the weight for the layer $\ell_i$ and
     		<li> $w^{(i)}_{jk}\in {\mathbb R}$ denote the weight from the $j$-th neuron of $\ell_{i-1}$ to the $k$-th neuron of $\ell_i$  													      
 	</ul>
-	<b>Layer outputs:</b> For $i=1, 2, \ldots, L$, $z^{(i)} \in {\mathbb R}^{h_i}$ for the layer $\ell_i$ be defined as follows:<br>    
+	<b>Layer outputs:</b> For $i=1, 2, \ldots, L-1$, $z^{(i)} \in {\mathbb R}^{h_i}$ for the layer $\ell_i$ be defined as follows:<br>    
     	<ul>
 		<li>$z^{(1)} = \left(w^{(1)}\right)^T\cdot x + b^{(1)}$ where $x\in{\mathbb R}^{h_{i-1}}$ is the input vector
         	<li>$z^{(i)} = \left(w^{(i)}\right)^T\cdot a^{(i-1)} + b^{(i)}$ for $i=2,3,\ldots,L$ where $a^{(i)}$ is defined as below
 	</ul>
-	<b>Layer output activations:</b> For $i=0, 1, 2, \ldots, L$, let $a^{(i)}\in {\mathbb R}^{h_i}$ for the layer $\ell_i$ be defined as follows: <br>   
+	<b>Layer output activations:</b> For $i=0, 1, 2, \ldots, L-1$, let $a^{(i)}\in {\mathbb R}^{h_i}$ for the layer $\ell_i$ be defined as follows: <br>   
     	<ul>
 		<li>$a^{(0)}\in {\mathbb R}^{h_0}$ is initialized to the input vector $x$ and  
         	<li>$a^{(i)}=\sigma(z^{(i)})$ for $i=1,2, \ldots,L$ with some activation function $\sigma$ (we discuss activation functions later)												      
 	</ul>
-	<b>Output of the network:</b> $a^{(L)} \in {\mathbb R}^{h_L}$ <br><br>												      
+	<b>Output of the network:</b> $a^{(L-1)} \in {\mathbb R}^{h_{L-1}}$ <br><br>												      
 	</td></tr>												      
 	<tr><td><H3>2. Computation of Errors</H3></td></tr>													      
 	<tr><td>												      
 	The most common optimization algorithms used in neural networks are different varients of Gradient Descent (GD) where the objective function is a cost function  CC  that we want to minimize.<br><br>
 	<b>Cost function:</b> Let $C$ be some differentiable cost function (we discuss cost functions later)<br><br>
-	<b>Error in output:</b> For $j\in\{1, 2, \ldots, h_L\}$ 
+	<b>Error in output:</b> For $j\in\{1, 2, \ldots, h_{L-1}\}$ 
 
 	    $$\begin{eqnarray*}
 	    \delta^{(L)}_j &=& {\partial C}/{\partial z^{(L)}_j} \\
