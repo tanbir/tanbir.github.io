@@ -96,7 +96,26 @@
 			\end{bmatrix}     \\           
 		&=&  \nabla_a{C}\odot \sigma^{\prime}(z^{(L)})
 	    \end{eqnarray*}$$													      
-													      
+	
+	<b>Error propagated to other layers:</b> For $i=L-1, L-2, \ldots, 2$,
+
+	    $$\begin{eqnarray*}
+	    \delta^{(i)}_j &=& {\partial C}/{\partial z^{(i)}_j} 
+		 = \sum_k\left({\partial C}/{\partial z^{(i+1)}_k}\right) \left({\partial z^{(i+1)}_k}/{\partial z^{(i)}_j}\right)   
+		 = \left({\partial z^{(i+1)}_k}/{\partial z^{(i)}_j}\right) \delta^{(i+1)}_k 
+	    \end{eqnarray*}$$
+    
+    		Since $z^{(i+1)} = \left(w^{(i+1)}\right)^Ta^{(i)}+b^{(i+1)}$, we have 
+    
+	    $$\begin{eqnarray}
+		z^{(i+1)}_k &=& \sum_j\left(w^{(i+1)}\right)^T_{kj}a^{(i)}_j + b^{(i+1)}_k = \sum_jw^{(i+1)}_{jk}\sigma(z^{(i)}_j) + b^{(i+1)}_k     
+		\end{eqnarray}$$
+     
+     		Therefore, ${\partial z^{(i+1)}_k}/{\partial z^{(i)}_j} = w^{(i+1)}_{jk}\sigma^\prime(z^{(i)}_j)$ which implies 
+     		$$\delta^{(i)}_j = \sum_kw^{(i+1)}_{jk}\delta^{(i+1)}_k\sigma^\prime(z^{(i)}_j).$$ 
+     
+     	Hence,
+    		$$\delta^{(i)} = \left(w^{(i+1)}\cdot \delta^{(i+1)}\right)\odot \sigma^{\prime}(z^{(i)}).$$													      
 	</td></tr>											
   </table>
 </td></tr></table>													     
