@@ -207,8 +207,16 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 	b_{t+1}^{(i)} &=& b_t^{(i)} + v_t^{(b,i)}
 	\end{eqnarray}
 
-	Here $\alpha$ is the momentum hyperparameter. The larger the value of $\alpha$ than the learning rate $\eta$, the more previous gradients affect the current direction. Momentum accelerates the advancement in the direction of the gradient. A typical value of $\alpha$ is $0.9$. For $\alpha=0.9$, the speed is asympototically 10 times faster than the standard SGD.<br><br>
-	</td></tr>																								      
+	Here $\alpha$ is the momentum hyperparameter. The larger the value of $\alpha$ than the learning rate $\eta$, the more previous gradients affect the current direction. Momentum accelerates the advancement in the direction of the gradient. A typical value of $\alpha$ is $0.9$. For $\alpha=0.9$, the speed is asymptotically 10 times faster than the standard SGD.<br><br>
+	</td></tr>	
+													      
+	<tr><td><H5>3.1.3 Considering Lookahead (known as Nesterov Momentum)</H5></td></tr>
+	<tr><td>
+	\begin{eqnarray}
+	w_{t+1}^{(i)} &=& w_t^{(i)} + \alpha v_{t}^{(w,i)} - \eta_t \left[\frac{\partial C}{\partial w_t^{(i)}}\right] \\
+	b_{t+1}^{(i)} &=& b_t^{(i)} + \alpha v_{t}^{(b,i)} - \eta_t \left[\frac{\partial C}{\partial b_t^{(i)}}\right]
+	\end{eqnarray}													      
+	</td></tr>													      
   </table>
 </td></tr></table>													     
 </body>                                                                                                  
