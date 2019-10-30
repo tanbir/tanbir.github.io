@@ -89,10 +89,10 @@
 			\end{bmatrix}
 			\odot 
 			\begin{bmatrix}
-			{\partial a^{(L)}_1}/{\partial z^{(L-1)}_1} \\
-			{\partial a^{(L)}_2}/{\partial z^{(L-1)}_2} \\
+			{\partial a^{(L-1)}_1}/{\partial z^{(L-1)}_1} \\
+			{\partial a^{(L-1)}_2}/{\partial z^{(L-1)}_2} \\
 			\cdots \\
-			{\partial a^{(L)}_{h_L}}/{\partial z^{(L-1)}_{h_L}}
+			{\partial a^{(L-1)}_{h_L}}/{\partial z^{(L-1)}_{h_L}}
 			\end{bmatrix}     \\           
 		&=&  \nabla_a{C}\odot \sigma^{\prime}(z^{(L-1)})
 	    \end{eqnarray*}$$													      
