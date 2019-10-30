@@ -52,6 +52,11 @@
 		<li>$z^{(1)} = \left(w^{(1)}\right)^T\cdot x + b^{(1)}$ where $x\in{\mathbb R}^{h_{i-1}}$ is the input vector
         	<li>$z^{(i)} = \left(w^{(i)}\right)^T\cdot a^{(i-1)} + b^{(i)}$ for $i=2,3,\ldots,L$ where $a^{(i)}$ is defined as below
 	</ul>
+	<b>Layer output activations:</b> For $i=0, 1, 2, \ldots, L$, let $a^{(i)}\in {\mathbb R}^{h_i}$ for the layer $\ell_i$ be defined as follows: <br>   
+    	<ul>
+		<li>$a^{(0)}\in {\mathbb R}^{h_0}$ is initialized to the input vector $x$ and  
+        	<li>$a^{(i)}=\sigma(z^{(i)})$ for $i=1,2, \ldots,L$ with some activation function $\sigma$ (we discuss activation functions later)												      
+	</ul>
 	</td></tr>												      
   </table>
 </td></tr></table>													     
