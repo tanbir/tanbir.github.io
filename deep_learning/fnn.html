@@ -66,38 +66,38 @@
 	<b>Error in output:</b> For $j\in\{1, 2, \ldots, h_{L-1}\}$ 
 
 	    $$\begin{eqnarray*}
-	    \delta^{(L)}_j &=& {\partial C}/{\partial z^{(L)}_j} \\
-		 &=& \sum_k\left({\partial C}/{\partial a^{(L)}_k}\right) \left({\partial a^{(L)}_k}/{\partial z^{(L)}_j}\right)  \\ 
-		 &=& \left({\partial C}/{\partial a^{(L)}_j}\right) \left({\partial a^{(L)}_j}/{\partial z^{(L)}_j}\right) 
+	    \delta^{(L-1)}_j &=& {\partial C}/{\partial z^{(L-1)}_j} \\
+		 &=& \sum_k\left({\partial C}/{\partial a^{(L-1)}_k}\right) \left({\partial a^{(L-1)}_k}/{\partial z^{(L-1)}_j}\right)  \\ 
+		 &=& \left({\partial C}/{\partial a^{(L-1)}_j}\right) \left({\partial a^{(L-1)}_j}/{\partial z^{(L-1)}_j}\right) 
 	    \end{eqnarray*}$$
     
     	Hence, error in the output layer:
 	    $$\begin{eqnarray*}
-	    \delta^{(L)} &=& 
+	    \delta^{(L-1)} &=& 
 		  \begin{bmatrix}
-		   {\partial C}/{\partial z^{(L)}_1} \\
-		   {\partial C}/{\partial z^{(L)}_2} \\
+		   {\partial C}/{\partial z^{(L-1)}_1} \\
+		   {\partial C}/{\partial z^{(L-1)}_2} \\
 		    \cdots \\
-		   {\partial C}/{\partial z^{(L)}_{h_L}} 
+		   {\partial C}/{\partial z^{(L-1)}_{h_L}} 
 		   \end{bmatrix} \\
 		  &=&
 			 \begin{bmatrix}
-			 {\partial C}/{\partial a^{(L)}_1} \\
-			{\partial C}/{\partial a^{(L)}_2} \\
+			 {\partial C}/{\partial a^{(L-1)}_1} \\
+			{\partial C}/{\partial a^{(L-1)}_2} \\
 			\cdots \\
-			{\partial C}/{\partial a^{(L)}_{h_L}}
+			{\partial C}/{\partial a^{(L-1)}_{h_L}}
 			\end{bmatrix}
 			\odot 
 			\begin{bmatrix}
-			{\partial a^{(L)}_1}/{\partial z^{(L)}_1} \\
-			{\partial a^{(L)}_2}/{\partial z^{(L)}_2} \\
+			{\partial a^{(L)}_1}/{\partial z^{(L-1)}_1} \\
+			{\partial a^{(L)}_2}/{\partial z^{(L-1)}_2} \\
 			\cdots \\
-			{\partial a^{(L)}_{h_L}}/{\partial z^{(L)}_{h_L}}
+			{\partial a^{(L)}_{h_L}}/{\partial z^{(L-1)}_{h_L}}
 			\end{bmatrix}     \\           
-		&=&  \nabla_a{C}\odot \sigma^{\prime}(z^{(L)})
+		&=&  \nabla_a{C}\odot \sigma^{\prime}(z^{(L-1)})
 	    \end{eqnarray*}$$													      
 	
-	<b>Error propagated to other layers:</b> For $i=L-1, L-2, \ldots, 2, 1$,
+	<b>Error propagated to other layers:</b> For $i=L-2, L-3, \ldots, 2, 1$,
 
 	    $$\begin{eqnarray*}
 	    \delta^{(i)}_j &=& {\partial C}/{\partial z^{(i)}_j} \\
