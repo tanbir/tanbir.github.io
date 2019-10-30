@@ -333,10 +333,15 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 	<tr><td><H4>3.5 Adamax (a varient of Adam) algorithm</H4></td></tr>
 	<tr><td><H4>3.6 Nadam (a varient of Adam) algorithm</H4></td></tr>													      	
 	<tr><td><H4>3.7 AMSGrad (a varient of Adam) algorithm</H4></td></tr>		
-	<tr><td><H5>3.7.1 Updating parameters</H5></td></tr>
+	<tr><td><H5>3.7.1 Bias correction and updating parameters</H5></td></tr>
 	<tr><td>
-		The second moments are computed same as in Adam, but the updates are done using the maximum of $v_t$ and $v_{t-1}$:													      
-		\begin{eqnarray}
+		The moments are computed same as in Adam, but the updates are done using the maximum of $v_t$ and $v_{t-1}$:													      
+		\begin{eqnarray}			
+			{\hat v}_t^{(w,i)} &=& \frac{\max(v^{(w,i)}_t, v^{(w,i)}_{t-1})}{1.0 - \beta_2^t} \\
+			{\hat v}_t^{(b,i)} &=& \frac{\max(v^{(b,i)}_t, v^{(b,i)}_{t-1})}{1.0 - \beta_2^t} 													      
+		\end{eqnarray}													      
+		Then the parameters are updated same as in Adam:											      
+		\begin{eqnarray}													      
 		w^{(i)}_{t+1} &=& w^{(i)}_{t} - \eta_t\frac{{\hat m}^{(w,i)}_t}{\sqrt{{\hat v}^{(w,i)}_t} + \epsilon}  \\
 		b^{(i)}_{t+1} &=& b^{(i)}_{t} - \eta_t\frac{{\hat m}^{(b,i)}_t}{\sqrt{{\hat v}^{(b,i)}_t} + \epsilon}  \\
 		\end{eqnarray}
