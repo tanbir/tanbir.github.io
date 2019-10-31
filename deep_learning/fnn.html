@@ -286,13 +286,11 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 	Adaptive Moment (Adam) estimation considers both the running average of past gradients and the running average of past squared gradients. Let on iteration $t$ of updates, $m_t$ and $v_t$ denote, respectively the first moment (mean) and the second moment (uncentered variance) of gradients. 
 	Let $\beta_1$ and $\beta_2$, with $0<\beta_1<1$ and $0<\beta_2<1$ both generally close to $1$, denote the decay rates for $m_t$ and $v_t$ respectively.<br><br>
 	</td></tr>
-	<tr><td><H5>References</H5></td></tr>
+	<tr><td><H5>3.4.1 References</H5></td></tr>
 	<tr><td>												      
-	<ul>
-	     	<li> Diederik Kingma, Jimmy Ba, <a href=https://arxiv.org/pdf/1412.6980v9.pdf target=blank>Adam: A Method for Stochastic Optimization</a>		
-	</ul>
+	Diederik Kingma, Jimmy Ba, <a href=https://arxiv.org/pdf/1412.6980v9.pdf target=blank>Adam: A Method for Stochastic Optimization</a>			
 	</td></tr>												      
-	<tr><td><H5>3.4.1 Computation of the moments</H5></td></tr>
+	<tr><td><H5>3.4.2 Computation of the moments</H5></td></tr>
 	<tr><td>
 	At iteration $t\geq 0$ of updates, let 
 	<ul>	
@@ -309,7 +307,7 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 
 	where $m_0^{(w,i)}$, $m_0^{(b,i)}$, $v_0^{(w,i)}$ and $v_0^{(b,i)}$ are all initialized to zero-vectors.<br><br>												      
 	</td></tr>												      
-	<tr><td><H5>3.4.2 Bias correction of $m_t$ and $v_t$</H5></td></tr>
+	<tr><td><H5>3.4.3 Bias correction of $m_t$ and $v_t$</H5></td></tr>
 	<tr><td>
 		Since $m_t$ and $v_t$ are initialized to zero-vectors, these are biased towards zero. 
 		The bias-corrected moments are computed as follows: 
@@ -322,7 +320,7 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 		\end{eqnarray}
 	</td></tr>
 													      	
-	<tr><td><H5>3.4.3 Updating parameters</H5></td></tr>
+	<tr><td><H5>3.4.4 Updating parameters</H5></td></tr>
 	<tr><td>
 		\begin{eqnarray}
 		w^{(i)}_{t+1} &=& w^{(i)}_{t} - \eta_t\frac{{\hat m}^{(w,i)}_t}{\sqrt{{\hat v}^{(w,i)}_t} + \epsilon}  \\
