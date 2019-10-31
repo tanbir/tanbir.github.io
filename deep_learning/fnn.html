@@ -335,8 +335,9 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 	<tr><td><H4>3.7 AMSGrad (a varient of Adam) algorithm</H4></td></tr>	
 	<!--<tr><td><H5>References</H5></td></tr>-->
 	<tr><td>												      
+	Sashank J. Reddi, Satyen Kale, Sanjiv Kumar, <a href=https://openreview.net/forum?id=ryQu7f-RZ target=blank>On the Convergence of Adam and Beyond</a>, ICML, 2019												      
 	<ul>	     	
-		<li> Sashank J. Reddi, Satyen Kale, Sanjiv Kumar, <a href=https://openreview.net/forum?id=ryQu7f-RZ target=blank>On the Convergence of Adam and Beyond</a>
+		<li> 
  
 		<blockquote cite="https://openreview.net/forum?id=ryQu7f-RZ">
 			[The above varients of AdaGrad such as  RMSPROP,  ADAM,  ADADELTA,  NADAM, etc] have been proposed which mitigate the rapid decay of the learning rate using the exponential moving averages of squared past 
@@ -347,6 +348,9 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 			and  while  these  large  gradients are quite informative, their influence dies out rather quickly due 
 			to the exponential averaging, thus leading to poor convergence.
 		</blockquote>
+		<blockquote>
+			[...]													      	
+		</blockquote>													      
 		<blockquote>													      
 		The key difference of AMSGRAD
 		with ADAM is that it maintains the maximum of all $v_t$ until the present time step and uses this
