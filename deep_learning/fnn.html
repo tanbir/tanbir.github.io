@@ -346,13 +346,7 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 			they have also been observed to not converge in some other settings. It has been typically observed 
 			that in these settings some  minibatches  provide  large  gradients  but  only  quite  rarely,  
 			and  while  these  large  gradients are quite informative, their influence dies out rather quickly due 
-			to the exponential averaging, thus leading to poor convergence.
-		</blockquote>
-		<blockquote>
-			[...]													      	
-		</blockquote>													      
-		<blockquote>													      
-		The key difference of AMSGRAD
+			to the exponential averaging, thus leading to poor convergence. [...] The key difference of AMSGRAD
 		with ADAM is that it maintains the maximum of all $v_t$ until the present time step and uses this
 		maximum value for normalizing the running average of the gradient instead of $v_t$ in ADAM. By
 		doing this, AMSGRAD results in a non-increasing step size and avoids the pitfalls of ADAM and
@@ -361,8 +355,8 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 		
 		<li> <H5>Key results</H5>													      
 		<ul>
-			<li> Non-convergence of Adam
-			<li>													      
+			<li> Proof of non-convergence of Adam in a specific setting 
+			<li> A new variant of Adam "with guaranteed convergence while preserving the practical benefits of ADAM and RMSPROP"													      
 		</ul>													      
 	</ul>
 	</td></tr>													      
