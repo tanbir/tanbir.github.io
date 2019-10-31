@@ -366,7 +366,7 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 			{\hat v}_t^{(w,i)} &=& \frac{\max(v^{(w,i)}_t, v^{(w,i)}_{t-1})}{1.0 - \beta_2^t} \\
 			{\hat v}_t^{(b,i)} &=& \frac{\max(v^{(b,i)}_t, v^{(b,i)}_{t-1})}{1.0 - \beta_2^t} 													      
 		\end{eqnarray}													      
-		Note that ${\hat m}_t^{(w,i)}$ and ${\hat m}_t^{(b,i)}$ are not modified. Then the parameters are updated same as in Adam:											      
+		Note that ${\hat m}_t^{(w,i)}$ and ${\hat m}_t^{(b,i)}$ are not modified and for simplicity the denominators (above) may be replced by 1.0. Then the parameters are updated same as in Adam:											      
 		\begin{eqnarray}													      
 		w^{(i)}_{t+1} &=& w^{(i)}_{t} - \eta_t\frac{{\hat m}^{(w,i)}_t}{\sqrt{{\hat v}^{(w,i)}_t} + \epsilon}  \\
 		b^{(i)}_{t+1} &=& b^{(i)}_{t} - \eta_t\frac{{\hat m}^{(b,i)}_t}{\sqrt{{\hat v}^{(b,i)}_t} + \epsilon}  \\
