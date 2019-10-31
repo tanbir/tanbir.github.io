@@ -348,6 +348,15 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 			and  while  these  large  gradients are quite informative, their influence dies out rather quickly due 
 			to the exponential averaging, thus leading to poor convergence.
 		</blockquote>
+		<blockquote>													      
+		AMSGRAD uses a smaller learning rate in comparison to ADAM and yet incorporates the intuition
+		of slowly decaying the effect of past gradients on the learning rate as long as Γt is positive semidefinite. 
+		Algorithm 2 presents the pseudocode for the algorithm. The key difference of AMSGRAD
+		with ADAM is that it maintains the maximum of all vt until the present time step and uses this
+		maximum value for normalizing the running average of the gradient instead of vt in ADAM. By
+		doing this, AMSGRAD results in a non-increasing step size and avoids the pitfalls of ADAM and
+		RMSPROP.
+		</blockquote>
 	</ul>
 	</td></tr>													      
 	<tr><td><H5>3.7.1 Bias correction and updating parameters</H5></td></tr>
