@@ -358,7 +358,7 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 	</td></tr>													      
 	<tr><td><H5>3.7.1 Mainitaining maximum of $v_t$ and updating parameters</H5></td></tr>
 	<tr><td>
-		As a remedy, to maintain a non-increasing step size, 
+		To maintain a non-increasing step size, 
 		the updates are done using the maximum of $v_t$ and $v_{t-1}$ while the moments are computed in the same way as in Adam.													      
 		\begin{eqnarray}			
 			{\hat v}_t^{(w,i)} &=& \frac{\max(v^{(w,i)}_t, v^{(w,i)}_{t-1})}{1.0 - \beta_2^t} \\
