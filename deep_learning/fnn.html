@@ -338,6 +338,9 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 	<tr><td>												      
 	<ul>	     	
 		<li> Sashank J. Reddi, Satyen Kale, Sanjiv Kumar, <a href=https://openreview.net/forum?id=ryQu7f-RZ target=blank>On the Convergence of Adam and Beyond</a>
+		<blockquote cite="https://openreview.net/forum?id=ryQu7f-RZ">
+			mitigate the rapid decay of the learning rate using the exponential moving averages of squared pastgradients, essentially limiting the reliance of the update to only the past few gradients. While thesealgorithms have been successfully employed in several practical applications, they have also beenobserved to not converge in some other settings. It has been typically observed that in these settingssome  minibatches  provide  large  gradients  but  only  quite  rarely,  and  while  these  large  gradientsare quite informative, their influence dies out rather quickly due to the exponential averaging, thusleading to poor convergence.
+		</blockquote>
 	</ul>
 	</td></tr>													      
 	<tr><td><H5>3.7.1 Bias correction and updating parameters</H5></td></tr>
