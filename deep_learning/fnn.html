@@ -76,11 +76,11 @@
 		$$\delta^{(i)}_j=\frac{\partial C}{\partial z^{(i)}_j}.$$
 	<b>Cost function:</b> Let $C$ be some differentiable cost function with the following assumptions:
 		<ul>
-			<li> $C$ can be written as an average $C={1\over n}\sum_xC_x$ over cost functions $C_x$ for individual training examples $x$
+			<li> $C$ can be written as an average $C={1\over n}\sum_xC_x$ over cost functions $C_x$ with $\{1,2,\ldots,n\}$ for individual training examples $x$
 			<li> $C$ can be written as a function of the outputs of the neural network  
 		</ul>
 		<br><br>
-	<b>Error in output:</b>For $j\in\{1, 2, \ldots, h_{L-1}\}$,   
+	<b>Error in output:</b> For $j\in\{1, 2, \ldots, h_{L-1}\}$,   
 
 	    $$\begin{eqnarray*}
 	    \delta^{(L-1)}_j &=& {\partial C}/{\partial z^{(L-1)}_j} \\
