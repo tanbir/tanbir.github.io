@@ -61,7 +61,10 @@
 		<li>$z^{(1)} = \left(w^{(1)}\right)^T\cdot x + b^{(1)}$ where $x\in{\mathbb R}^{h_{i-1}}$ is the input vector
         	<li>$z^{(i)} = \left(w^{(i)}\right)^T\cdot a^{(i-1)} + b^{(i)}$ for $i=2,3,\ldots,L-1$ where $a^{(i)}$ are the layer output activations defined below. <br>
 		<li> More precisely,
-			$$z^{(i)}_k = \sum_{j}{\left(w^{(i)}\right)}^T_{kj}a^{(i-1)}_j + b^{(i)}_k.$$
+			$$\begin{eqnarray}
+				z^{(i)}_k &=& \sum_{j}{\left(w^{(i)}\right)}^T_{kj}a^{(i-1)}_j + b^{(i)}_k\\
+				&=& \sum_{j}{\left(w^{(i)}\right)}_{jk}a^{(i-1)}_j + b^{(i)}_k
+			\end{eqnarray}$$
 													      
 	</ul>
 	<b>Layer output activations:</b> For $i=0, 1, 2, \ldots, L-1$, let $a^{(i)}\in {\mathbb R}^{h_i}$ for the layer $\ell_i$ be defined as follows: <br>   
