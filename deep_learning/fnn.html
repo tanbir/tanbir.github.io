@@ -125,9 +125,9 @@
 	<b>Error propagated to other layers:</b> For $i=L-2, L-3, \ldots, 2, 1$,
 
 	    $$\begin{eqnarray*}
-	    \delta^{(i)}_j &=& {\partial C}/{\partial z^{(i)}_j} \\
-		 &=& \sum_k\left({\partial C}/{\partial z^{(i+1)}_k}\right) \left({\partial z^{(i+1)}_k}/{\partial z^{(i)}_j}\right)  \\ 
-		 &=& \left({\partial z^{(i+1)}_k}/{\partial z^{(i)}_j}\right) \delta^{(i+1)}_k 
+	    \delta^{(i)}_k &=& {\partial C}/{\partial z^{(i)}_k} \\
+		 &=& \sum_j\left({\partial C}/{\partial z^{(i+1)}_j}\right) \left({\partial z^{(i+1)}_j}/{\partial z^{(i)}_k}\right)  \\ 
+		 &=& \left({\partial z^{(i+1)}_j}/{\partial z^{(i)}_k}\right) \delta^{(i+1)}_j 
 	    \end{eqnarray*}$$
     
     		Since $z^{(i+1)} = \left(w^{(i+1)}\right)^Ta^{(i)}+b^{(i+1)}$, we have 
