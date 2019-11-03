@@ -68,7 +68,8 @@
 	</ul>
 	<b>Output of the network:</b> $a^{(L-1)} \in {\mathbb R}^{h_{L-1}}$ <br><br>												      
 	</td></tr>												      
-	<tr><td><H2>2. Computation of Errors</H2></td></tr>													      
+	<tr><td><H2>2. Computation of Gradients</H2></td></tr>
+	<tr><td><H3>2.1 Computation of layer-errors</H3></td></tr>												      
 	<tr><td>												      
 	The most common optimization algorithms used in neural networks are different varients of Gradient Descent (GD) 
 	where the objective function is a cost function  $C$  that we want to minimize. For $1, 2, \ldots,L-1$ and $j=1,2,\ldots,h_i$, 
@@ -141,7 +142,7 @@
     		
 	$$\delta^{(i)} = \left(w^{(i+1)}\cdot \delta^{(i+1)}\right)\odot \sigma^{\prime}(z^{(i)}).$$
 	</td></tr>
-	<tr><td><H2>2. Computation of Gradients</H2></td></tr>	
+	<tr><td><H3>2.2 Computation of Gradients</H3></td></tr>	
 	<tr><td>
 	<b>Rate of change of $C$ with respect to any bias:</b> 
 	\begin{eqnarray}  
