@@ -69,7 +69,7 @@
 	<b>Output of the network:</b> $a^{(L-1)} \in {\mathbb R}^{h_{L-1}}$ <br><br>												      
 	</td></tr>												      
 	<tr><td><H2>2. Computation of Gradients</H2></td></tr>
-	<tr><td><H3>2.1 Cost function, activation function and layer-errors</H3></td></tr>												      
+	<tr><td><H3>2.1 Cost function and layer-errors</H3></td></tr>												      
 	<tr><td>												      
 	<b>Cost function:</b> The most common optimization algorithms used in neural networks are different varients of Gradient Descent (GD) 
 	where the objective function is a cost function  $C$  that we want to minimize. Let $C$ be some cost function with the following assumptions:
@@ -115,10 +115,6 @@
 		&=&  \nabla_a{C}\odot \sigma^{\prime}(z^{(L-1)})
 	    \end{eqnarray*}$$
 	where $\nabla_a{C}$ is defined to be a vector whose components are the partial derivatives ${\partial C}/{\partial a^{(L-1)}_j}$.<br><br>
-	
-	<b>Choice of Cost function:</b> <br><br> 
-													      
-	<b>Choice of Activation function:</b> <br><br> 
 													      
 	<b>Error propagated to other layers:</b> For $i=L-2, L-3, \ldots, 2, 1$,
 
@@ -146,7 +142,8 @@
 	<tr><td>
 	<b>Rate of change of $C$ with respect to any bias:</b> 
 	\begin{eqnarray}  
-	  \frac{\partial C}{\partial b^{(i)}_j} &=&  \delta^{(i)}_j.
+	  \frac{\partial C}{\partial b^{(i)}_j} &=&  \frac{\partial C}{\partial z^{(i)}_j}\frac{\partial z^{(i)}_j}{\partial b^{(i)}_j} \\
+						&=& \delta^{(i)}_j \frac{\partial {}}{\partial b^{(i)}_j}\left(\right).
 	\end{eqnarray}
 
     Hence,
@@ -175,7 +172,11 @@ Further simplifying, $$\begin{eqnarray}
 \end{eqnarray}$$
 
 Since above error-calculations are for a single input $x$. Let us extend our notation to incorporate the inputs. Let $\delta^{(x, i)}$ denote the error in layer $i$ on input $x$. Similarly, we extend the notation of $a{(i)}$ to $a^{(x,i)}$ for layer $i$.<br><br>
-	</td></tr>											
+	</td></tr>
+													      
+<tr><td><H3>2.3 Choice of Cost function</H3></td></tr> 
+													      
+<tr><td><H3>2.4 Choice of Activation function</H3></td></tr> 													      
 													      
 	<tr><td><H2>3. Optimization Algorithms</H2></td></tr>													      
 	<tr><td><H4>3.1. Stochastic Gradient Descent</H4></td></tr>													      													      
