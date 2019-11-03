@@ -87,12 +87,12 @@
 	let $\delta^{(i)}_k$ denote the error in the $k$-th neuron of layer $i$ defined as 
 		$$\delta^{(i)}_k=\frac{\partial C}{\partial z^{(i)}_k}.$$
 													      
-	<b>Error in output:</b> For $j\in\{1, 2, \ldots, h_{L-1}\}$,   
+	<b>Error in output:</b> For $k\in\{1, 2, \ldots, h_{L-1}\}$,   
 
 	    $$\begin{eqnarray*}
-	    \delta^{(L-1)}_j &=& {\partial C}/{\partial z^{(L-1)}_j} \\
-		 &=& \sum_k\left({\partial C}/{\partial a^{(L-1)}_k}\right) \left({\partial a^{(L-1)}_k}/{\partial z^{(L-1)}_j}\right)  \\ 
-		 &=& \left({\partial C}/{\partial a^{(L-1)}_j}\right) \left({\partial a^{(L-1)}_j}/{\partial z^{(L-1)}_j}\right) 
+	    \delta^{(L-1)}_k &=& {\partial C}/{\partial z^{(L-1)}_k} \\
+		 &=& \sum_k\left({\partial C}/{\partial a^{(L-1)}_j}\right) \left({\partial a^{(L-1)}_j}/{\partial z^{(L-1)}_k}\right)  \\ 
+		 &=& \left({\partial C}/{\partial a^{(L-1)}_k}\right) \left({\partial a^{(L-1)}_k}/{\partial z^{(L-1)}_k}\right) 
 	    \end{eqnarray*}$$
     
     	Hence, error in the output layer:
