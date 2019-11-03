@@ -138,7 +138,11 @@
      		$$\delta^{(i)}_j = \sum_kw^{(i+1)}_{jk}\delta^{(i+1)}_k\sigma^\prime(z^{(i)}_j).$$ 
      
      	Hence,
-    		$$\delta^{(i)} = \left(w^{(i+1)}\cdot \delta^{(i+1)}\right)\odot \sigma^{\prime}(z^{(i)}).$$													      
+    		
+	$$\delta^{(i)} = \left(w^{(i+1)}\cdot \delta^{(i+1)}\right)\odot \sigma^{\prime}(z^{(i)}).$$
+	</td></tr>
+	<tr><td><H2>2. Computation of Gradients</H2></td></tr>	
+	<tr><td>
 	<b>Rate of change of $C$ with respect to any bias:</b> 
 	\begin{eqnarray}  
 	  \frac{\partial C}{\partial b^{(i)}_j} &=&  \delta^{(i)}_j.
