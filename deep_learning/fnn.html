@@ -69,18 +69,19 @@
 	<b>Output of the network:</b> $a^{(L-1)} \in {\mathbb R}^{h_{L-1}}$ <br><br>												      
 	</td></tr>												      
 	<tr><td><H2>2. Computation of Gradients</H2></td></tr>
-	<tr><td><H3>2.1 Computation of layer-errors</H3></td></tr>												      
+	<tr><td><H3>2.1 Cost function, activation function and layer-errors</H3></td></tr>												      
 	<tr><td>												      
 	The most common optimization algorithms used in neural networks are different varients of Gradient Descent (GD) 
-	where the objective function is a cost function  $C$  that we want to minimize. For $1, 2, \ldots,L-1$ and $j=1,2,\ldots,h_i$, 
-	let $\delta^{(i)}_j$ denote the error in the $j$-th neuron of layer $i$ defined as 
-		$$\delta^{(i)}_j=\frac{\partial C}{\partial z^{(i)}_j}.$$
+	where the objective function is a cost function  $C$  that we want to minimize. <br><br>
 	<b>Cost function:</b> Let $C$ be some cost function with the following assumptions:
 		<ul>
 			<li> $C$ can be written as an average $C={1\over n}\sum_xC_x$ over cost functions $C_x$ for individual training examples $x\in\{1,2,\ldots,n\}$. 
 			<li> $C$ can be written as a function of the outputs of the neural network  
 		</ul>
-		
+	For $1, 2, \ldots,L-1$ and $j=1,2,\ldots,h_i$, 
+	let $\delta^{(i)}_j$ denote the error in the $j$-th neuron of layer $i$ defined as 
+		$$\delta^{(i)}_j=\frac{\partial C}{\partial z^{(i)}_j}.$$
+													      
 	<b>Error in output:</b> For $j\in\{1, 2, \ldots, h_{L-1}\}$,   
 
 	    $$\begin{eqnarray*}
