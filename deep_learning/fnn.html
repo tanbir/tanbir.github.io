@@ -29,7 +29,7 @@
 	<tr><td><H2>Introduction</H2></td></tr>
 	<tr><td>												  
 		The main purpose of this project is to explore the recent developments in Deep Learning research and implement a basic 
-		Numpy-based Keras-like framework for desiging neural networks. To key references for a better understanding on the theory 
+		Numpy-based Keras-like framework for desiging neural networks. Two key references for a better understanding on the theory 
 		and implementation aspects on the topic are		 
 		<ul>
 			<li> Ian Goodfellow, Yoshua Bengio and Aaron Courville, <a href=http://www.deeplearningbook.org/ target=blank>Deep Learning</a>, MIT Press, 2016
@@ -77,7 +77,7 @@
 			<li> $C$ can be written as an average $C={1\over n}\sum_xC_x$ over cost functions $C_x$ for individual training examples $x\in\{1,2,\ldots,n\}$. 
 			<li> $C$ can be written as a function of the outputs of the neural network  
 		</ul>
-	For $1, 2, \ldots,L-1$ and $j=1,2,\ldots,h_i$, 
+	<b>Layer errors:</b> For $1, 2, \ldots,L-1$ and $j=1,2,\ldots,h_i$, 
 	let $\delta^{(i)}_j$ denote the error in the $j$-th neuron of layer $i$ defined as 
 		$$\delta^{(i)}_j=\frac{\partial C}{\partial z^{(i)}_j}.$$
 													      
