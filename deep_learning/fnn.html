@@ -149,7 +149,8 @@
 	<b>Rate of change of $C$ with respect to any bias:</b> 
 	\begin{eqnarray}  
 	  \frac{\partial C}{\partial b^{(i)}_k} &=&  \frac{\partial C}{\partial z^{(i)}_k}\frac{\partial z^{(i)}_k}{\partial b^{(i)}_k} \\
-						&=& \delta^{(i)}_k \frac{\partial {}}{\partial b^{(i)}_k}\left(\sum_{j}w^{(i)}_{jk}a^{(i-1)}_j + b^{(i)}_k\right).
+						&=& \delta^{(i)}_k \frac{\partial {}}{\partial b^{(i)}_k}\left(\sum_{j}w^{(i)}_{jk}a^{(i-1)}_j + b^{(i)}_k\right) \\
+						&=& \delta^{(i)}_k
 	\end{eqnarray}
 
     Hence,
