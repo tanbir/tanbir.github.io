@@ -171,7 +171,9 @@
 		\end{eqnarray}
 <b>Rate of change of $C$ with respect to any weight:</b>
 $$\begin{eqnarray}  
-  \frac{\partial C}{\partial w^{(i)}_{jk}} =  \delta^{(i)}_ka^{(i-1)}_j.
+  \frac{\partial C}{\partial w^{(i)}_{jk}} &=&  \frac{\partial C}{\partial z^{(i)}_k}\frac{\partial z^{(i)}_k}{\partial w^{(i)}_{jk}} \\
+					&=& \delta^{(i)}_k \frac{\partial {}}{\partial b^{(i)}_k}\left(\sum_{j}w^{(i)}_{jk}a^{(i-1)}_j + b^{(i)}_k\right) \\								      
+					\delta^{(i)}_ka^{(i-1)}_j.
 \end{eqnarray}$$
 													      
 Further simplifying, $$\begin{eqnarray}  
