@@ -159,8 +159,8 @@
 			{\partial C}/{\partial b^{(i)}_2} \\
 			\cdots \\
 			{\partial C}/{\partial b^{(i)}_{h_i}}
-			\end{bmatrix}  \\
-			&=& \begin{bmatrix}
+			\end{bmatrix}  
+			= \begin{bmatrix}
 			{\delta^{(i)}_1} \\
 			{\delta^{(i)}_2} \\
 			\cdots \\
@@ -169,8 +169,8 @@
 		\end{eqnarray}
 <b>Rate of change of $C$ with respect to any weight:</b>
 $$\begin{eqnarray}  
-  \frac{\partial C}{\partial w^{(i)}_{jk}} &=&  \frac{\partial C}{\partial z^{(i)}_k}\frac{\partial z^{(i)}_k}{\partial w^{(i)}_{jk}} \\
-					&=&  \frac{\partial {}}{\partial w^{(i)}_{jk}}\left(\sum_{k}w^{(i)}_{kj}a^{(i-1)}_k + b^{(i)}_j\right) \delta^{(i)}_k\\								      
+  \frac{\partial C}{\partial w^{(i)}_{jk}} &=&  \frac{\partial C}{\partial z^{(i)}_j}\frac{\partial z^{(i)}_j}{\partial w^{(i)}_{jk}} \\
+					&=&  \frac{\partial {}}{\partial w^{(i)}_{jk}}\left(\sum_{k}w^{(i)}_{kj}a^{(i-1)}_k + b^{(i)}_j\right) \delta^{(i)}_j\\								      
 					&=&  a^{(i-1)}_k \delta^{(i)}_j.
 \end{eqnarray}$$
 													      
