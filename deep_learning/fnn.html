@@ -53,17 +53,17 @@
 	</ul>
 	<b>Weights:</b> For $i=1, 2, \ldots, L-1$, let <br>
 	<ul>
-		<li> $w^{(i)} \in {\mathbb R}^{h_{i-1}\times h_{i}}$ denote the weight for the layer $\ell_i$ and
-    		<li> $w^{(i)}_{jk}\in {\mathbb R}$ denote the weight from the $j$-th neuron of $\ell_{i-1}$ to the $k$-th neuron of $\ell_i$  													      
+		<li> $w^{(i)} \in {\mathbb R}^{h_{i}\times h_{i-1}}$ denote the weight for the layer $\ell_i$ and
+    		<li> $w^{(i)}_{jk}\in {\mathbb R}$ denote the weight from the $j$-th neuron of $\ell_{i}$ to the $k$-th neuron of $\ell_{i-1}$  													      
 	</ul>
 	<b>Layer outputs:</b> For $i=1, 2, \ldots, L-1$, $z^{(i)} \in {\mathbb R}^{h_i}$ for the layer $\ell_i$ be defined as follows:<br>    
     	<ul>
-		<li>$z^{(1)} = \left(w^{(1)}\right)^T\cdot x + b^{(1)}$ where $x\in{\mathbb R}^{h_{i-1}}$ is the input vector
-        	<li>$z^{(i)} = \left(w^{(i)}\right)^T\cdot a^{(i-1)} + b^{(i)}$ for $i=2,3,\ldots,L-1$ where $a^{(i)}$ are the layer output activations defined below. <br>
+		<li>$z^{(1)} = w^{(1)}\cdot x + b^{(1)}$ where $x\in{\mathbb R}^{h_{i-1}}$ is the input vector
+        	<li>$z^{(i)} = w^{(i)}\cdot a^{(i-1)} + b^{(i)}$ for $i=2,3,\ldots,L-1$ where $a^{(i)}$ are the layer output activations defined below. <br>
 		<li> More precisely,
 			$$\begin{eqnarray}
-				z^{(i)}_k &=& \sum_{j}{\left(w^{(i)}\right)}^T_{kj}a^{(i-1)}_j + b^{(i)}_k\\
-				&=& \sum_{j}w^{(i)}_{jk}a^{(i-1)}_j + b^{(i)}_k
+				z^{(i)}_j %&=& \sum_{k}{\left(w^{(i)}\right)}^T_{kj}a^{(i-1)}_j + b^{(i)}_k\\
+				&=& \sum_{k}w^{(i)}_{jk}a^{(i-1)}_k + b^{(i)}_j
 			\end{eqnarray}$$
 													      
 	</ul>
