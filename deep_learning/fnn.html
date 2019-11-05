@@ -132,12 +132,11 @@
     		Since $z^{(i+1)} = w^{(i+1)}a^{(i)}+b^{(i+1)}$, we have 
     
 	    $$\begin{eqnarray}
-		z^{(i+1)}_k %&=& \sum_j\left(w^{(i+1)}\right)^T_{jk}a^{(i)}_k + b^{(i+1)}_j \\ 
-		&=& \sum_jw^{(i+1)}_{jk}\sigma(z^{(i)}_j) + b^{(i+1)}_k     
+		z^{(i+1)}_k &=& \sum_jw^{(i+1)}_{kj}\sigma(z^{(i)}_j) + b^{(i+1)}_k     
 		\end{eqnarray}$$
      
-     		Therefore, ${\partial z^{(i+1)}_j}/{\partial z^{(i)}_k} = w^{(i+1)}_{kj}\sigma^\prime(z^{(i)}_k)$ which implies 
-     		$$\delta^{(i)}_k = \sum_jw^{(i+1)}_{kj}\delta^{(i+1)}_j\sigma^\prime(z^{(i)}_k).$$ 
+     		Therefore, ${\partial z^{(i+1)}_k}/{\partial z^{(i)}_j} = w^{(i+1)}_{kj}\sigma^\prime(z^{(i)}_j)$ which implies 
+     		$$\delta^{(i)}_j = \sum_kw^{(i+1)}_{kj}\delta^{(i+1)}_j\sigma^\prime(z^{(i)}_j).$$ 
      
      	Hence,
     		
