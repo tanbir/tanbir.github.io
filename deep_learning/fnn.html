@@ -62,8 +62,7 @@
         	<li>$z^{(i)} = w^{(i)}\cdot a^{(i-1)} + b^{(i)}$ for $i=2,3,\ldots,L-1$ where $a^{(i)}$ are the layer output activations defined below. <br>
 		<li> More precisely,
 			$$\begin{eqnarray}
-				z^{(i)}_j %&=& \sum_{k}{\left(w^{(i)}\right)}^T_{kj}a^{(i-1)}_j + b^{(i)}_k\\
-				&=& \sum_{k}w^{(i)}_{jk}a^{(i-1)}_k + b^{(i)}_j
+				z^{(i)}_j &=& \sum_{k}w^{(i)}_{jk}a^{(i-1)}_k + b^{(i)}_j
 			\end{eqnarray}$$
 													      
 	</ul>
@@ -84,15 +83,15 @@
 			<li> $C$ can be written as a function of the outputs of the neural network  
 		</ul>
 	<b>Layer errors:</b> For $1, 2, \ldots,L-1$ and $k=1,2,\ldots,h_i$, 
-	let $\delta^{(i)}_k$ denote the error in the $k$-th neuron of layer $i$ defined as 
-		$$\delta^{(i)}_k=\frac{\partial C}{\partial z^{(i)}_k}.$$
+	let $\delta^{(i)}_j$ denote the error in the $j$-th neuron of layer $i$ defined as 
+		$$\delta^{(i)}_j=\frac{\partial C}{\partial z^{(i)}_j}.$$
 													      
 	<b>Error in output:</b> For $k\in\{1, 2, \ldots, h_{L-1}\}$,   
 
 	    $$\begin{eqnarray*}
-	    \delta^{(L-1)}_k &=& {\partial C}/{\partial z^{(L-1)}_k} \\
-		 &=& \sum_j\left({\partial C}/{\partial a^{(L-1)}_j}\right) \left({\partial a^{(L-1)}_j}/{\partial z^{(L-1)}_k}\right)  \\ 
-		 &=& \left({\partial C}/{\partial a^{(L-1)}_k}\right) \left({\partial a^{(L-1)}_k}/{\partial z^{(L-1)}_k}\right) 
+	    \delta^{(L-1)}_j &=& {\partial C}/{\partial z^{(L-1)}_j} \\
+		 &=& \sum_k\left({\partial C}/{\partial a^{(L-1)}_k}\right) \left({\partial a^{(L-1)}_k}/{\partial z^{(L-1)}_j}\right)  \\ 
+		 &=& \left({\partial C}/{\partial a^{(L-1)}_j}\right) \left({\partial a^{(L-1)}_j}/{\partial z^{(L-1)}_j}\right) 
 	    \end{eqnarray*}$$
     
     	Hence, error in the output layer:
