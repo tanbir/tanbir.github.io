@@ -146,9 +146,9 @@
 	<tr><td>
 	<b>Rate of change of $C$ with respect to any bias:</b> 
 	\begin{eqnarray}  
-	  \frac{\partial C}{\partial b^{(i)}_k} &=&  \frac{\partial C}{\partial z^{(i)}_k}\frac{\partial z^{(i)}_k}{\partial b^{(i)}_k} \\
-						&=& \delta^{(i)}_k \frac{\partial {}}{\partial b^{(i)}_k}\left(\sum_{j}w^{(i)}_{jk}a^{(i-1)}_j + b^{(i)}_k\right) \\
-						&=& \delta^{(i)}_k
+	  \frac{\partial C}{\partial b^{(i)}_j} &=&  \frac{\partial C}{\partial z^{(i)}_j}\frac{\partial z^{(i)}_j}{\partial b^{(i)}_j} \\
+						&=& \delta^{(i)}_j \frac{\partial {}}{\partial b^{(i)}_j}\left(\sum_{k}w^{(i)}_{kj}a^{(i-1)}_k + b^{(i)}_j\right) \\
+						&=& \delta^{(i)}_j
 	\end{eqnarray}
 
     Hence,
@@ -170,8 +170,8 @@
 <b>Rate of change of $C$ with respect to any weight:</b>
 $$\begin{eqnarray}  
   \frac{\partial C}{\partial w^{(i)}_{jk}} &=&  \frac{\partial C}{\partial z^{(i)}_k}\frac{\partial z^{(i)}_k}{\partial w^{(i)}_{jk}} \\
-					&=&  \frac{\partial {}}{\partial w^{(i)}_{jk}}\left(\sum_{j}w^{(i)}_{jk}a^{(i-1)}_j + b^{(i)}_k\right) \delta^{(i)}_k\\								      
-					&=&  a^{(i-1)}_j \delta^{(i)}_k.
+					&=&  \frac{\partial {}}{\partial w^{(i)}_{jk}}\left(\sum_{k}w^{(i)}_{kj}a^{(i-1)}_k + b^{(i)}_j\right) \delta^{(i)}_k\\								      
+					&=&  a^{(i-1)}_k \delta^{(i)}_j.
 \end{eqnarray}$$
 													      
 Further simplifying, $$\begin{eqnarray}  
