@@ -174,9 +174,11 @@ $$\begin{eqnarray}
 					&=&  a^{(i-1)}_k \delta^{(i)}_j.
 \end{eqnarray}$$
 													      
-Further simplifying, $$\begin{eqnarray}  
+Further simplifying, we get $\frac{\partial C}{\partial w^{(i)}}\in {\mathbb R}^{h_i \times h_{i-1}}$ as follows:  
+$$\begin{eqnarray}  
   \frac{\partial C}{\partial w^{(i)}} =  \delta^{(i)}\left(a^{(i-1)}\right)^T.
-\end{eqnarray}$$
+\end{eqnarray},$$
+
 
 Since above error-calculations are for a single input $x$. Let us extend our notation to incorporate the inputs. Let $\delta^{(x, i)}$ denote the error in layer $i$ on input $x$. Similarly, we extend the notation of $a{(i)}$ to $a^{(x,i)}$ for layer $i$.<br><br>
 	</td></tr>
