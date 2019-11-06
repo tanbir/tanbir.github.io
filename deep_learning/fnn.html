@@ -196,13 +196,13 @@ which implies ${\partial C}/{\partial a^{(L-1)}_j} = (a^{L-1}_j - y_j)$. Hence,
 The Mean-Squared-Error (MSE) cost function is defined as $C = (1.0/h_{L-1})\sum_j(a^{(L-1)}_j - y_j)^2$	
 which implies 
 	which implies ${\partial C}/{\partial a^{(L-1)}_j} = 2(a^{L-1}_j - y_j)/h_{L-1}$. Hence, 
-	$$\nabla_aC=2(a^{(L-1)}-y)h_{L-1}.$$ 
+	$$\nabla_aC=2(a^{(L-1)}-y)/h_{L-1}.$$ 
 </td></tr>
 
 <tr><td><H4>2.3.2 Mean-Absolute-Error</H4></td></tr>	
 <tr><td>
 	The Mean-Absolute-Error (MAE) cost function is defined as $C = (1.0/h_{L-1})\sum_j |a^{(L-1)}_j - y_j|$	which implies
-	${\partial C}/{\partial a^{(L-1)}_j} = +1$ if $a^{(L-1)}_j\gt y_j$ and $-1$ if $a^{(L-1)}_j\lt y_j$. 
+	${\partial C}/{\partial a^{(L-1)}_j} = +1/h_{L-1}$ if $a^{(L-1)}_j\gt y_j$ and $-1/h_{L-1}$ if $a^{(L-1)}_j\lt y_j$. 
 												       <br><br>
 </td></tr>													      
 <tr><td><H3>2.4 Choice of Activation function</H3></td></tr> 													      
