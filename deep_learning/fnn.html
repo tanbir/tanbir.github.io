@@ -29,12 +29,13 @@
 	<tr><td><H2>Introduction</H2></td></tr>
 	<tr><td>												  
 		The main purpose of this project is to explore the recent developments in Deep Learning research and implement a basic 
-		Numpy-based Keras-like framework for desiging neural networks. Two key references for a better understanding on the theory 
+		Numpy-based Keras-like framework for designing neural networks. Two key references for a better understanding on the theory 
 		and implementation aspects on the topic are		 
 		<ul>
 			<li> Ian Goodfellow, Yoshua Bengio and Aaron Courville, <a href=http://www.deeplearningbook.org/ target=blank>Deep Learning</a>, MIT Press, 2016
-			<li> Michael Nielsen, <a href=http://neuralnetworksanddeeplearning.com/chap2.html target=blank>Neural Networks and Deep Learning</a>, 2016
+			<li> Michael Nielsen, <a href=http://neuralnetworksanddeeplearning.com/chap2.html target=blank>Neural Networks and Deep Learning</a>, 2016				
 		</ul>
+		The notations here are taken from nielsen's book with minor changes.											     
 	</td></tr>
 	<tr><td><H2>1. Data Structure</H2></td></tr>												      	
 	<tr><td>
@@ -184,7 +185,13 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 	</td></tr>
 													      
 <tr><td><H3>2.3 Choice of Cost function</H3></td></tr> 
-<tr><td><H4>2.3.1 </H4></td></tr>														      
+<tr><td>
+		
+</td></tr>	
+<tr><td><H4>2.3.1 Quadratic</H4></td></tr>	
+<tr><td>
+	$$\begin{eqnarray}C &=& 0.5\sum_j(a^{L-1}_j - y_j)^2\end{eqnarray}$$	
+</td></tr>
 													      
 <tr><td><H3>2.4 Choice of Activation function</H3></td></tr> 													      
 													      
