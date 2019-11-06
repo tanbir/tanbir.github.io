@@ -188,13 +188,19 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 <tr><td>
 	The error in the output layer $\delta^{(L-1)}$ depends on the cost function $C$, more precisely, $\nabla_aC$. <br><br>	
 </td></tr>	
-<tr><td><H4>2.3.1 Quadratic cost</H4></td></tr>	
+<tr><td><H4>2.3.1 Quadratic</H4></td></tr>	
 <tr><td>
 	The Quadratic cost function is defined as $C = 0.5\sum_j(a^{(L-1)}_j - y_j)^2$	
 which implies ${\partial C}/{\partial a^{(L-1)}_j} = (a^{L-1}_j - y_j)$. Hence, 
 	$$\nabla_aC=a^{(L-1)}-y.$$ 
 </td></tr>
-													      
+
+<tr><td><H4>2.3.2 Mean-Squared-Error</H4></td></tr>	
+<tr><td>
+	The Mean-Squared-Error (MSE) cost function is defined as $C = (1.0/h_{L-1})\sum_j(a^{(L-1)}_j - y_j)^2$	
+which implies ${\partial C}/{\partial a^{(L-1)}_j} = 2(a^{L-1}_j - y_j)/h_{L-1}$. Hence, 
+	$$\nabla_aC=2(a^{(L-1)}-y)/h_{L-1}.$$ 
+</td></tr>													      
 <tr><td><H3>2.4 Choice of Activation function</H3></td></tr> 													      
 													      
 	<tr><td><H2>3. Optimization Algorithms</H2></td></tr>													      
