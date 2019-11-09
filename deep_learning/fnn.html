@@ -204,7 +204,16 @@ which implies
 	The Mean-Absolute-Error (MAE) cost function is defined as $C = (1.0/h_{L-1})\sum_j |a^{(L-1)}_j - y_j|$	which implies
 	${\partial C}/{\partial a^{(L-1)}_j} = +1/h_{L-1}$ if $a^{(L-1)}_j\gt y_j$ and $-1/h_{L-1}$ if $a^{(L-1)}_j\lt y_j$. 
 												       <br><br>
-</td></tr>													      
+</td></tr>
+
+<tr><td><H4>2.3.3 Binary Crosentropy</H4></td></tr>	
+<tr><td>
+	The Mean-Absolute-Error (MAE) cost function is defined as $C = -(y\log{a^{(L-1)}_j} + (1-y)\log{1-a^{(L_1)}_j})$	
+	which implies
+	${\partial C}/{\partial a^{(L-1)}_j} = (a^{(L-1)}_j - y_j) / (a^{(L-1)}_j (1-a^{(L-1)}_j)). Hence, 
+	$$\nabla_aC=(a^{(L-1)}-y)/(a^{(L-1)}(1-a^{(L-1)})).$$
+												       <br><br>
+</td></tr>
 <tr><td><H3>2.4 Choice of Activation function</H3></td></tr> 													      
 													      
 	<tr><td><H2>3. Optimization Algorithms</H2></td></tr>													      
