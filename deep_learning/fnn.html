@@ -198,8 +198,34 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 	is equivalent to $h$ independent Binary Classification problems, an input
 	may belong to more than one of the $h$ classes.
 	<br><br>	
-</td></tr>	
-<tr><td><H4>2.4.1 Quadratic / Mean-Squared-Error</H4></td></tr>	
+</td></tr>
+
+<tr><td><H4>2.4.1 Cross-entropy</H4></td></tr>
+<tr><td><H5>2.4.1.1 Binary Cross-entropy</H5></td></tr>
+<tr><td>
+	In binary classification, a single output neuron with a sigmoid activation function is used with $a$ being the output activation 
+	and $y\in\{0,1\}$ being the desired output.   
+	The binary cross-entropy cost function is defined as $C = -y \log a - (1-y)\log{(1-a)}$	
+	which implies
+	$$\nabla_aC=\frac{a-y}{a(1-a)}.$$
+												       <br><br>
+</td></tr>
+<tr><td><H5>2.4.1.2 Categorical Cross-entropy</H5></td></tr>
+<tr><td>
+	In multi-class classification, softmax activation function is used with $y_j\in\{0,1\}$ and $0\leq a_j \leq 1.0$ 
+	for $j=1,2,\ldots,h$ such that
+	$$\begin{eqnarray}
+		\sum_jy_j &=& 1 \\
+		\sum_ja_j &=& 1
+	\end{eqnarray}$$
+	The Cross-entropy cost function is defined as $C = -\sum_jy_j\log{a_j}$	
+	which implies
+	${\partial C}/{\partial a_j} = - y_j/a_j$. Hence, 
+	$$\nabla_aC=-y/a.$$
+												       <br><br>
+</td></tr>
+
+<tr><td><H4>2.4.2 Quadratic / Mean-Squared-Error</H4></td></tr>	
 <tr><td>
 	The Quadratic cost function is defined as $C = 0.5\sum_j(a_j - y_j)^2$	
 which implies ${\partial C}/{\partial a_j} = (a_j - y_j)$. Hence, 
@@ -210,31 +236,14 @@ which implies
 	$$\nabla_aC=(2/h)(a-y).$$ 
 </td></tr>
 
-<tr><td><H4>2.4.2 Mean-Absolute-Error</H4></td></tr>	
+<tr><td><H4>2.4.3 Mean-Absolute-Error</H4></td></tr>	
 <tr><td>
 	The Mean-Absolute-Error (MAE) cost function is defined as $C = (1.0/h)\sum_j |a_j - y_j|$	which implies
 	${\partial C}/{\partial a_j} = +1/h$ if $a_j\gt y_j$ and $-1/h$ if $a_j\lt y_j$. 
 												       <br><br>
 </td></tr>
 
-<tr><td><H4>2.4.3 Cross-entropy</H4></td></tr>
-<tr><td><H5>2.4.3.1 Binary Cross-entropy</H5></td></tr>
-<tr><td>
-	In binary classification, a single output neuron with a sigmoid activation function is used with $a$ being the output activation 
-	and $y\in\{0,1\}$ being the desired output.   
-	The binary cross-entropy cost function is defined as $C = -y \log a - (1-y)\log{(1-a)}$	
-	which implies
-	$$\nabla_aC=\frac{a-y}{a(1-a)}.$$
-												       <br><br>
-</td></tr>
-<tr><td><H5>2.4.3.2 Categorical Cross-entropy</H5></td></tr>
-<tr><td>
-	The Cross-entropy cost function is defined as $C = -\sum_jy_j\log{a_j}$	
-	which implies
-	${\partial C}/{\partial a_j} = - y_j/a_j$. Hence, 
-	$$\nabla_aC=-y/a.$$
-												       <br><br>
-</td></tr>
+
 													      
 													      
 	<tr><td><H2>3. Optimization Algorithms</H2></td></tr>													      
