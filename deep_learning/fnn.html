@@ -183,12 +183,18 @@ $$\begin{eqnarray}
 
 Since above error-calculations are for a single input $x$. Let us extend our notation to incorporate the inputs. Let $\delta^{(x, i)}$ denote the error in layer $i$ on input $x$. Similarly, we extend the notation of $a{(i)}$ to $a^{(x,i)}$ for layer $i$.<br><br>
 	</td></tr>
+
+<tr><td><H3>2.3 Choice of Activation function</H3></td></tr> 
 													      
-<tr><td><H3>2.3 Choosing a cost function</H3></td></tr> 
+<tr><td><H3>2.4 Cost functions</H3></td></tr> 
 <tr><td>
-	The error in the output layer $\delta^{(L-1)}$ depends on the cost function $C$, more precisely, $\nabla_aC$. For simplicity of notation, let us write $a$ in place of $a^{(L-1)}$ and $h$ in place of $h_{L-1}$.<br><br>	
+	The error in the output layer $\delta^{(L-1)}$ depends on the cost function $C$, more precisely, $\nabla_aC$. For simplicity of notation, let us write $a$ in place of $a^{(L-1)}$ and $h$ in place of $h_{L-1}$.
+	A <b>Multi-Class Classification</b> problem is a single classification problem where a input can can belong to 
+	exactly one of the $h$ (with $h\geq 2$) output classes. A <b>Binary Classification</b> is a Multi-Class Classification with $h=2$.
+	The output is a <b>One-hot vector</b> which is a binary vector in $\{0,1\}^h$ with exactly one dimension being $1$.
+	<br><br>	
 </td></tr>	
-<tr><td><H4>2.3.1 Quadratic / Mean-Squared-Error</H4></td></tr>	
+<tr><td><H4>2.4.1 Quadratic / Mean-Squared-Error</H4></td></tr>	
 <tr><td>
 	The Quadratic cost function is defined as $C = 0.5\sum_j(a_j - y_j)^2$	
 which implies ${\partial C}/{\partial a_j} = (a_j - y_j)$. Hence, 
@@ -199,14 +205,15 @@ which implies
 	$$\nabla_aC=(2/h)(a-y).$$ 
 </td></tr>
 
-<tr><td><H4>2.3.2 Mean-Absolute-Error</H4></td></tr>	
+<tr><td><H4>2.4.2 Mean-Absolute-Error</H4></td></tr>	
 <tr><td>
 	The Mean-Absolute-Error (MAE) cost function is defined as $C = (1.0/h)\sum_j |a_j - y_j|$	which implies
 	${\partial C}/{\partial a_j} = +1/h$ if $a_j\gt y_j$ and $-1/h$ if $a_j\lt y_j$. 
 												       <br><br>
 </td></tr>
 
-<tr><td><H4>2.3.3 Crosentropy</H4></td></tr>	
+<tr><td><H4>2.4.3 Crosentropy</H4></td></tr>
+<tr><td><H5>2.4.3.1 Crosentropy</H5></td></tr>
 <tr><td>
 	The Crossentropy cost function is defined as $C = -\sum_jy_j\log{a_j}$	
 	which implies
@@ -214,7 +221,7 @@ which implies
 	$$\nabla_aC=-y/a.$$
 												       <br><br>
 </td></tr>
-<tr><td><H3>2.4 Choice of Activation function</H3></td></tr> 													      
+													      
 													      
 	<tr><td><H2>3. Optimization Algorithms</H2></td></tr>													      
 	<tr><td><H4>3.1. Stochastic Gradient Descent</H4></td></tr>													      													      
