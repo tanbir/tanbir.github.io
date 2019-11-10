@@ -189,9 +189,12 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 <tr><td><H3>2.4 Cost functions</H3></td></tr> 
 <tr><td>
 	The error in the output layer $\delta^{(L-1)}$ depends on the cost function $C$, more precisely, $\nabla_aC$. For simplicity of notation, let us write $a$ in place of $a^{(L-1)}$ and $h$ in place of $h_{L-1}$.
-	A <b>Multi-Class Classification</b> problem is a single classification problem where a input can can belong to 
-	exactly one of the $h$ (with $h\geq 2$) output classes. A <b>Binary Classification</b> is a Multi-Class Classification with $h=2$.
+	A <b>Multi-Class Classification</b> problem is a single classification problem where an input can belong to 
+	exactly one of the $h$ (with $h\geq 2$) output classes. 
 	The output is a <b>One-hot vector</b> which is a binary vector in $\{0,1\}^h$ with exactly one dimension being $1$.
+	A <b>Binary Classification</b> is a Multi-Class Classification with $h=2$. In a <b>Multi-Label Classification</b> problem which 
+	is equivalent to $h$ independent Binary Classification problems, an input
+	may belong to more than one of the $h$ classes.
 	<br><br>	
 </td></tr>	
 <tr><td><H4>2.4.1 Quadratic / Mean-Squared-Error</H4></td></tr>	
@@ -212,8 +215,8 @@ which implies
 												       <br><br>
 </td></tr>
 
-<tr><td><H4>2.4.3 Crosentropy</H4></td></tr>
-<tr><td><H5>2.4.3.1 Crosentropy</H5></td></tr>
+<tr><td><H4>2.4.3 Crossentropy</H4></td></tr>
+<tr><td><H5>2.4.3.1 Crossentropy</H5></td></tr>
 <tr><td>
 	The Crossentropy cost function is defined as $C = -\sum_jy_j\log{a_j}$	
 	which implies
