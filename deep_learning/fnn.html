@@ -206,12 +206,12 @@ which implies
 												       <br><br>
 </td></tr>
 
-<tr><td><H4>2.3.3 Binary Crosentropy</H4></td></tr>	
+<tr><td><H4>2.3.3 Crosentropy</H4></td></tr>	
 <tr><td>
-	The Mean-Absolute-Error (MAE) cost function is defined as $C = -(y\log{a_j} + (1-y)\log{1-a_j})$	
+	The Crossentropy cost function is defined as $C = -\sum_jy_j\log{a_j}$	
 	which implies
-	${\partial C}/{\partial a_j} = (a_j - y_j) / (a_j (1-a_j))$. Hence, 
-	$$\nabla_aC=(a-y)/(a(1-a)).$$
+	${\partial C}/{\partial a_j} = - y_j/a_j$. Hence, 
+	$$\nabla_aC=-y/a.$$
 												       <br><br>
 </td></tr>
 <tr><td><H3>2.4 Choice of Activation function</H3></td></tr> 													      
