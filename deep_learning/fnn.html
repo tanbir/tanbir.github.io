@@ -186,32 +186,32 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 													      
 <tr><td><H3>2.3 Choosing a cost function</H3></td></tr> 
 <tr><td>
-	The error in the output layer $\delta^{(L-1)}$ depends on the cost function $C$, more precisely, $\nabla_aC$. <br><br>	
+	The error in the output layer $\delta^{(L-1)}$ depends on the cost function $C$, more precisely, $\nabla_aC$. For simplicity of notation, let us write $a$ in place of $a^{(L-1)}$ and $h$ in place of $h_{L-1}$.<br><br>	
 </td></tr>	
 <tr><td><H4>2.3.1 Quadratic / Mean-Squared-Error</H4></td></tr>	
 <tr><td>
-	The Quadratic cost function is defined as $C = 0.5\sum_j(a^{(L-1)}_j - y_j)^2$	
-which implies ${\partial C}/{\partial a^{(L-1)}_j} = (a^{L-1}_j - y_j)$. Hence, 
-	$$\nabla_aC=a^{(L-1)}-y.$$ 
-The Mean-Squared-Error (MSE) cost function is defined as $C = (1.0/h_{L-1})\sum_j(a^{(L-1)}_j - y_j)^2$	
+	The Quadratic cost function is defined as $C = 0.5\sum_j(a_j - y_j)^2$	
+which implies ${\partial C}/{\partial a_j} = (a_j - y_j)$. Hence, 
+	$$\nabla_aC=a-y.$$ 
+The Mean-Squared-Error (MSE) cost function is defined as $C = (1.0/h)\sum_j(a_j - y_j)^2$	
 which implies 
-	which implies ${\partial C}/{\partial a^{(L-1)}_j} = (2/h_{L-1})(a^{L-1}_j - y_j)$. Hence, 
-	$$\nabla_aC=(2/h_{L-1})(a^{(L-1)}-y).$$ 
+	which implies ${\partial C}/{\partial a_j} = (2/h)(a_j - y_j)$. Hence, 
+	$$\nabla_aC=(2/h)(a-y).$$ 
 </td></tr>
 
 <tr><td><H4>2.3.2 Mean-Absolute-Error</H4></td></tr>	
 <tr><td>
-	The Mean-Absolute-Error (MAE) cost function is defined as $C = (1.0/h_{L-1})\sum_j |a^{(L-1)}_j - y_j|$	which implies
-	${\partial C}/{\partial a^{(L-1)}_j} = +1/h_{L-1}$ if $a^{(L-1)}_j\gt y_j$ and $-1/h_{L-1}$ if $a^{(L-1)}_j\lt y_j$. 
+	The Mean-Absolute-Error (MAE) cost function is defined as $C = (1.0/h)\sum_j |a_j - y_j|$	which implies
+	${\partial C}/{\partial a_j} = +1/h$ if $a_j\gt y_j$ and $-1/h$ if $a_j\lt y_j$. 
 												       <br><br>
 </td></tr>
 
 <tr><td><H4>2.3.3 Binary Crosentropy</H4></td></tr>	
 <tr><td>
-	The Mean-Absolute-Error (MAE) cost function is defined as $C = -(y\log{a^{(L-1)}_j} + (1-y)\log{1-a^{(L_1)}_j})$	
+	The Mean-Absolute-Error (MAE) cost function is defined as $C = -(y\log{a_j} + (1-y)\log{1-a_j})$	
 	which implies
-	${\partial C}/{\partial a^{(L-1)}_j} = (a^{(L-1)}_j - y_j) / (a^{(L-1)}_j (1-a^{(L-1)}_j))$. Hence, 
-	$$\nabla_aC=(a^{(L-1)}-y)/(a^{(L-1)}(1-a^{(L-1)})).$$
+	${\partial C}/{\partial a_j} = (a_j - y_j) / (a_j (1-a_j))$. Hence, 
+	$$\nabla_aC=(a-y)/(a(1-a)).$$
 												       <br><br>
 </td></tr>
 <tr><td><H3>2.4 Choice of Activation function</H3></td></tr> 													      
