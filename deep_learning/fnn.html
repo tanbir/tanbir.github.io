@@ -217,10 +217,19 @@ which implies
 												       <br><br>
 </td></tr>
 
-<tr><td><H4>2.4.3 Crossentropy</H4></td></tr>
-<tr><td><H5>2.4.3.1 Crossentropy</H5></td></tr>
+<tr><td><H4>2.4.3 Cross-entropy</H4></td></tr>
+<tr><td><H5>2.4.3.1 Binary Cross-entropy</H5></td></tr>
 <tr><td>
-	The Crossentropy cost function is defined as $C = -\sum_jy_j\log{a_j}$	
+	In binary classification, a single neuron with sigmoid activation
+	The Binary Cross-entropy cost function is defined as $C = -y \log a - (1-y)\log{(1-a)}$	
+	which implies
+	${\partial C}/{\partial a} = (a-y)/(a(1-a))$. Hence, 
+	$$\nabla_aC=\frac{a-y}{a(1-a)}.$$
+												       <br><br>
+</td></tr>
+<tr><td><H5>2.4.3.2 Categorical Cross-entropy</H5></td></tr>
+<tr><td>
+	The Cross-entropy cost function is defined as $C = -\sum_jy_j\log{a_j}$	
 	which implies
 	${\partial C}/{\partial a_j} = - y_j/a_j$. Hence, 
 	$$\nabla_aC=-y/a.$$
