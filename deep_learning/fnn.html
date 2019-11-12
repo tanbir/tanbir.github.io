@@ -211,7 +211,7 @@ Since above error-calculations are for a single input $x$. Let us extend our not
 </td></tr>
 <tr><td><H5>2.4.1.2 Categorical Cross-entropy</H5></td></tr>
 <tr><td>
-	In multi-class classification, softmax activation function is used with $0\leq a_j \leq 1.0$ such that $\sum_ja_j=1$.
+	In multi-class classification, softmax activation function is used such that $0\leq a_j \leq 1.0$ and $\sum_ja_j=1$.
 	The categorical cross-entropy cost function is defined as $C = -\sum_jy_j\log{a_j}$	where $y_j\in\{0,1\}$ and $\sum_jy_j=1$,
 	which implies
 		${\partial C}/{\partial a_j} = - y_j/a_j$. Hence, 
