@@ -445,8 +445,9 @@ which implies
 		</blockquote>
 	</td></tr>												
 	<tr><td><H4>3.6 Adamax (a varient of Adam) algorithm</H4></td></tr>													      
-	<tr><td><H4>3.7 AMSGrad (a varient of Adam) algorithm</H4></td></tr>	
-	<tr><td><H5>3.7.1 Reference</H5></td></tr>	
+	<tr><td><H4>3.7 Adadelta (a varient of Adam) algorithm</H4></td></tr>													      
+	<tr><td><H4>3.8 AMSGrad (a varient of Adam) algorithm</H4></td></tr>	
+	<tr><td><H5>3.8.1 Reference</H5></td></tr>	
 	<tr><td>														      
 	Sashank J. Reddi, Satyen Kale, Sanjiv Kumar, <a href=https://openreview.net/forum?id=ryQu7f-RZ target=blank>On the Convergence of Adam and Beyond</a>, ICML, 2019												      
 	<ul>	     	
@@ -473,7 +474,7 @@ which implies
 		</ul>													      
 	</ul>
 	</td></tr>													      
-	<tr><td><H5>3.7.2 Mainitaining maximum of $v_t$ and updating parameters</H5></td></tr>
+	<tr><td><H5>3.8.2 Mainitaining maximum of $v_t$ and updating parameters</H5></td></tr>
 	<tr><td>
 		To maintain a non-increasing step size, 
 		the updates are done using the maximum of $v_t$ and $v_{t-1}$ while the moments are computed in the same way as in Adam.													      
