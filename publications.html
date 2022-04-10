@@ -31,52 +31,6 @@
    <script type="text/javascript" id="MathJax-script" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
     </script>  
-	  
-	  <script>
-		  $('.panel-collapse').on('show.bs.collapse', function () {
-		    $(this).siblings('.panel-heading').addClass('active');
-		  });
-
-		  $('.panel-collapse').on('hide.bs.collapse', function () {
-		    $(this).siblings('.panel-heading').removeClass('active');
-		  });
-	  </script>
-    <style>
-	  .wrapper{
-		  width:100%;
-		}
-		@media(max-width:992px){
-		 .wrapper{
-		  width:100%;
-		} 
-		}
-		.panel-heading {
-		  padding: 0;
-			border:0;
-		}
-		.panel-title>a, .panel-title>a:active{
-			display:block;
-			padding:15px;
-		  color:#555;
-		  font-size:16px;
-		  font-weight:bold;
-			text-transform:uppercase;
-			letter-spacing:1px;
-		  word-spacing:3px;
-			text-decoration:none;
-		}
-		.panel-heading  a:before {
-		   font-family: 'Glyphicons Halflings';
-		   content: "\e114";
-		   float: right;
-		   transition: all 0.5s;
-		}
-		.panel-heading.active a:before {
-			-webkit-transform: rotate(180deg);
-			-moz-transform: rotate(180deg);
-			transform: rotate(180deg);
-		}
-	  </style>
   </head>
     
   <body id="page-top" style="background-color:#FFFFFF;">
@@ -131,54 +85,38 @@
                 Self-Similar Algebra
                 </div>
             </h5>
-<div class="wrapper center-block">
-  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  <div class="panel panel-default">
-    <div class="panel-heading active" role="tab" id="headingOne">
-      <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Collapsible Group Item #1
-        </a>
-      </h4>
-    </div>
-    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-      <div class="panel-body">
-        Your contents...
-      </div>
-    </div>
-  </div>
-	</div>
-		    </div>
+
 <div class="container my-4">
 	<hr>
 
-    <p class="font-weight-bold">Ramsey Theory (Integer and Zero-Sum), Combinatorial Geometry, Sets and Sequences, Self-Similar Algebra</p>
+    	<p class="font-weight-bold">Ramsey Theory (Integer and Zero-Sum), Combinatorial Geometry, Sets and Sequences, Self-Similar Algebra</p>
     
-    <!--Accordion wrapper-->
-<div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
-	<!-- Accordion card -->
-  	<div class="card">
-    		<!-- Card header -->
-    		<div class="card-header" role="tab" id="headingOne1">      
-			T. Ahmed, L. Boza, M. P. Revuelta, and M. I. Sanz, Exact values and lower bounds on the n-color weak Schur numbers for n = 2, 3, 4, 
-			to appear in <a href='https://www.springer.com/journal/11139' class=gen>The Ramanujan Journal</a> (2022) <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="false"
-								     aria-controls="collapseOne1"> <h5 class="mb-0"><i class="fas fa-angle-down rotate-icon"></i></h5></a>
-    		</div>
+    	<!--Accordion wrapper-->
+	<div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+		<!-- Accordion card -->
+		<div class="card">
+			<!-- Card header -->
+			<div class="card-header" role="tab" id="headingOne1">      
+				T. Ahmed, L. Boza, M. P. Revuelta, and M. I. Sanz, Exact values and lower bounds on the n-color weak Schur numbers for n = 2, 3, 4, 
+				to appear in <a href='https://www.springer.com/journal/11139' class=gen>The Ramanujan Journal</a> (2022) <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="false"
+									     aria-controls="collapseOne1"> <h5 class="mb-0"><i class="fas fa-angle-down rotate-icon"></i></h5></a>
+			</div>
 
-    		<!-- Card body -->
-    		<div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
-      			<div class="card-body">
-				<b>Abstract:</b> For  integers \(k\), \(n\) with \(k\), \(n \geq 1\), the \(n\)-color weak Schur number 
-				\(WS_{k}(n)\) is defined as the least integer \(N\), such that for every \(n\)-coloring of the integer 
-				interval \([1,N]\), there exists a monochromatic solution \(x_{1},\dots, x_{k}, x_{k+1}\) in that interval to the equation:
-				<br><br><center>\(x_{1}+x_{2}+\dots+x_{k}  =x_{k+1},\)</center><br> with \(x_{i} \neq x_{j}\), when \(i\neq j.\)
+			<!-- Card body -->
+			<div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+				<div class="card-body">
+					<b>Abstract:</b> For  integers \(k\), \(n\) with \(k\), \(n \geq 1\), the \(n\)-color weak Schur number 
+					\(WS_{k}(n)\) is defined as the least integer \(N\), such that for every \(n\)-coloring of the integer 
+					interval \([1,N]\), there exists a monochromatic solution \(x_{1},\dots, x_{k}, x_{k+1}\) in that interval to the equation:
+					<br><br><center>\(x_{1}+x_{2}+\dots+x_{k}  =x_{k+1},\)</center><br> with \(x_{i} \neq x_{j}\), when \(i\neq j.\)
 
-				<br>In this paper, we obtain the exact values of \(WS_{6}(2)=166\), \(WS_{3}(3)=94\)  and \(WS_{4}(3)=259\)  
-				and we show lower bounds on \(n\)-color weak Schur number \(WS_{k}(n)\) for \(n=2,3,4.\)
-      			</div>
-    		</div>
-  	</div>
-  	<!-- Accordion card -->
+					<br>In this paper, we obtain the exact values of \(WS_{6}(2)=166\), \(WS_{3}(3)=94\)  and \(WS_{4}(3)=259\)  
+					and we show lower bounds on \(n\)-color weak Schur number \(WS_{k}(n)\) for \(n=2,3,4.\)
+				</div>
+			</div>
+		</div>
+		<!-- Accordion card -->
+	</div>
 </div>
 
               <ol reversed="n"">
