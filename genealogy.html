@@ -87,16 +87,100 @@
           <div style='padding-bottom:10px;'><h5>Math Subject Classifications: Combinatorics (05-XX), Number Theory (11-XX), 
             Computer Science (68-XX), Geometry (51-XX), Convex and Discrete Geometry (52-XX),  Linear and multilinear algebra; matrix theory (15-XX),
              History and biography (01-XX)</h5></div>
-		                        
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0" style="font-size:140%;color:#05246d">Journal articles (published / to appear)</h3>
-
+		 
 		    
 
 		    
       <div class="container my-3">
-        ssssssss
+        <style>
+ul, #myUL {
+  list-style-type: none;
+}
+
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.caret-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */'
+  transform: rotate(90deg);  
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<h2>Tree View</h2>
+<p>A tree view represents a hierarchical view of information, where each item can have a number of subitems.</p>
+<p>Click on the arrow(s) to open or close the tree branches.</p>
+
+<ul id="myUL">
+  <li><span class="caret">Jacob Bernoulli (1676)</span>
+    <ul class="nested">
+      <li><span class="caret">Johanne Bernoulli (1694)</span>
+      	<ul class="nested">
+        <li><span class="caret"> Leonhard Euler (1726)</span>
+        	<ul class="nested">
+            <li><span class="caret"> Joseph Lagrange (1754)</span>
+				<ul class="nested">
+                <li><span class="caret"> Siméon Poisson (1800)</span>
+					<ul class="nested">
+                    <li><span class="caret"> Michel Chasles (1814)</span>
+                        <ul class="nested">
+                        <li><span class="caret"> Hubert Anson Newton (1850)</span>
+
+                        </li>
+                        </ul>
+                    </li>
+                    </ul>
+                </li>
+                <li>Jean-Baptiste Fourier</li>
+                </ul>
+            </li>
+        </ul>
+        </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<script>
+var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+  toggler[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("active");
+    this.classList.toggle("caret-down");
+  });
+}
+</script>
+
       </div>
       </section>
 
