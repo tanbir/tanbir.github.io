@@ -376,12 +376,10 @@
 						<b>Abstract: </b> Let \(S(h,k)\) be the least positive integer such that any \(2\)-coloring of the interval \([1,S(h,k)]\) must admit either
 						[(i)] a monochromatic solution to \(x_1+\ldots+x_{h-1}=x_h\)  with  \(x_1 < x_2 < \ldots < x_h\) or
 						[(ii)] a monochromatic solution to \(x_1+\ldots+x_{k-1}=x_k\) with  \(x_1 < x_2 < \ldots < x_k\).
-		<!--
-		We prove \(S(3,3)=9\), \(S(3,4)=16\), and for all \(k\geq 5\), \(S(3,k)\) equals \(3k^2/2-7k/2+3\) if 
-								     \(k\equiv 0,1\pmod{4}\), and equals \(3k^2/2-7k/2+4\) if 
-								     \(k\equiv 2,3\pmod{4}\).
-		-->
-						\(
+		
+						We prove \(S(3,3)=9\), \(S(3,4)=16\), and for all \(k\geq 5\), \(S(3,k)\) 
+		
+						\(S(3,k)=
 						\left\{
 						\begin{array}{ll}
 						3k^2/2-7k/2+3 & \text{if $k\equiv 0,1\pmod{4}$},\\
@@ -396,7 +394,78 @@
 				</div>                                                                       
 			</div>                                      
 		</div>	
+		<!-- .modal -->
+		<div class="modal fade" id="more_vdw">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button> 
+					</div> 
+					<div class="modal-body">
+						<b>Abstract: </b> The <i>van der Waerden number</i> \(w(k; t_0, t_1,\ldots,t_{k-1})\) is the smallest positive integer
+						\(n\) such that every \(k\)-coloring of the sequence \({1,2,\ldots,n}\) yields a monochromatic
+						arithmetic progression of length \(t_i\) for some color \(i\in\set{0,1,\ldots,k-1}\).
+						In this paper, we propose a problem-specific backtracking algorithm for computing 
+						van der Waerden numbers \(w(k;t_0,t_1,\ldots,t_{k-1})\)
+						with \(t_0=t_1=\cdots=t_{j-1}=2\), where \(k\geq j+2\), and \(t_i\geq 3\) for \(i\geq j\).
+						We report some previously unknown van der Waerden numbers using this method.
+						We also report the exact value of the previously unknown van der Waerden number \(w(2;5,7)\).	
+					</div>   
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>                                                                       
+			</div>                                      
+		</div>	
+
 			
+		<!-- .modal -->
+		<div class="modal fade" id="2_vdw">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button> 
+					</div> 
+					<div class="modal-body">
+						<b>Abstract: </b> The <i>van der Waerden number</i> \(w(r; k_1, k_2, \ldots, k_r)\) is the least integer \(m\) such that
+						for every partition \(P_1\cup P_2\cup\cdots\cup P_r\) of the set \(\{1,2,\ldots,m\}\),
+						there is an index \(j\) in \(\{1,2,\ldots,r\}\) such that \(P_j\) contains an arithmetic progression of \(k_j\) terms.
+						We have computed exact values of the previously unknown van der Waerden numbers \(w(2; 3, 17)\) 
+						and \(w(2; 3, 18)\).   
+					</div>   
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>                                                                       
+			</div>                                      
+		</div>	
+
+		<!-- .modal -->
+		<div class="modal fade" id="30_vdw">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button> 
+					</div> 
+					<div class="modal-body">
+						<b>Abstract: </b> The van der Waerden number \(w(r; k_1, k_2, \cdots, k_r)\) is the least \(m\) such that
+						given any partition \(\{1,2,\cdots,m\}=P_1\cup P_2\cup\cdots\cup P_r\),
+						there is an index \(j\in\{1,2,\cdots,r\}\) such that \(P_j\) contains an arithmetic progression of length \(k_j\).
+						We have computed exact values of some (30) previously unkown van der Waerden numbers 
+						and also computed lower bounds of others. 
+						Let \(w_d(r; k_1, k_2, \cdots, k_r)\) be the least \(m\) such that
+						given any partition \(\{1,2,\cdots,m\}=P_1\cup P_2\cup\cdots\cup P_r\),
+						there is an index \(j\in\{1,2,\cdots,r-1\}\) such that \(P_j\) contains an arithmetic progression of length \(k_j\), or 
+						\(P_r\) contains an arithmetic progression of length \(k_r\) with common difference at most \(d\).
+						A table of observed values of \(w_d(r; k_1, k_2, \cdots, k_r)\) for \(d=1,2,\cdots,\lfloor{m-1\over{k_r-1}}\rfloor\) is given. 							
+					</div>   
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>                                                                       
+			</div>                                      
+		</div>		
+					
 		<b>On the \(3\)-color off-diagonal generalized Schur numbers \(S(3; 2, k_1, k_2)\)</b><br> 
 		 	Tanbir Ahmed, Luis Boza, Maria P. Revuelta, and Maria I. Sanz, Submitted to a journal.    
 		<hr>
@@ -515,70 +584,35 @@
                         <a href=http://www.integers-ejcnt.org/vol13.html target=blank class=gen>A22</a>.  
 			<a href=http://www.ams.org/mathscinet-getitem?mr=3083484 class=gen target=blank>MR3083484</a>.
 			<button type="button" class="btn btn-light" data-toggle="modal" data-target="#aems_schur">Abstract</button>	
-		<hr>	
-<ol reversed="n"">
-
-                  <li>
-                   Tanbir Ahmed, "Some more van der Waerden numbers",
-					       <a href=https://cs.uwaterloo.ca/journals/JIS/ class=gen target=blank>Journal of Integer Sequences</a>, 
-					       <b>16</b> (2013), Article 
-					       <a href=https://cs.uwaterloo.ca/journals/JIS/VOL16/Ahmed/ahmed2.pdf class=gen target=blank>13.4.4.</a>
-					       <a href=http://www.ams.org/mathscinet-getitem?mr=3056628 class=gen target=blank>MR3056628</a>.
-		<div style='padding-left:30px;'>
-			<b>Abstract: </b> The <i>van der Waerden number</i> \(w(k; t_0, t_1,\ldots,t_{k-1})\) is the smallest positive integer
-			\(n\) such that every \(k\)-coloring of the sequence \({1,2,\ldots,n}\) yields a monochromatic
-			arithmetic progression of length \(t_i\) for some color \(i\in\set{0,1,\ldots,k-1}\).
-			In this paper, we propose a problem-specific backtracking algorithm for computing 
-			van der Waerden numbers \(w(k;t_0,t_1,\ldots,t_{k-1})\)
-			with \(t_0=t_1=\cdots=t_{j-1}=2\), where \(k\geq j+2\), and \(t_i\geq 3\) for \(i\geq j\).
-			We report some previously unknown van der Waerden numbers using this method.
-			We also report the exact value of the previously unknown van der Waerden number \(w(2;5,7)\).					    
-			</div> 
-                  </li>
-                  <li>
-                  Tanbir Ahmed, "On computation of exact van der Waerden numbers",  
-						 <!--<i>Integers</i>,--> 
-                                                  <a href=http://www.integers-ejcnt.org/ class=gen target=blank>Integers</a>, <b>12 (3)</b> (2012), 417-425.  
-						   Online version: <a href=http://www.integers-ejcnt.org/vol11.html target=blank class=gen><b>11</b> (2011)</a>, A71.
-						  <a href=http://www.ams.org/mathscinet-getitem?mr=2955523 class=gen target=blank>MR2955523</a>.<br>
-                  </li>
-                  <li>
-                   Tanbir Ahmed, "Two new van der Waerden numbers: w(2; 3, 17) and w(2; 3, 18)",  
-					       <!--<i>Integers</i>, -->
-                                              <a href=http://www.integers-ejcnt.org/ class=gen target=blank>Integers</a>,
-					      <a href=http://www.integers-ejcnt.org/vol10.html target=blank class=gen><b>10</b> (2010)</a>, 369-377, A32.
-							 <a href=http://www.ams.org/mathscinet-getitem?mr=2684128 class=gen target=blank>MR2684128</a>.<br> 
-                <div style='padding-left:30px;'>
-			<b>Abstract: </b> The <i>van der Waerden number</i> \(w(r; k_1, k_2, \ldots, k_r)\) is the least integer \(m\) such that
-			for every partition \(P_1\cup P_2\cup\cdots\cup P_r\) of the set \(\{1,2,\ldots,m\}\),
-			there is an index \(j\) in \(\{1,2,\ldots,r\}\) such that \(P_j\) contains an arithmetic progression of \(k_j\) terms.
-			We have computed exact values of the previously unknown van der Waerden numbers \(w(2; 3, 17)\) 
-			and \(w(2; 3, 18)\).   
-		</div>
-		</li>
-                  <li>
-                  Tanbir Ahmed, "Some new van der Waerden numbers and some van der Waerden-type numbers",
-                                               <a href=http://www.integers-ejcnt.org/ class=gen target=blank>Integers</a>,
-                                                <a href=http://www.integers-ejcnt.org/vol9.html class=gen target=blank><b>9</b> (2009)</a>, 65-76, A06  
-					      
-                                                        <a href=http://www.ams.org/mathscinet-getitem?mr=2506138 class=gen target=blank>MR2506138</a>.
-		<div style='padding-left:30px;'>
-			<b>Abstract: </b> The van der Waerden number \(w(r; k_1, k_2, \cdots, k_r)\) is the least \(m\) such that
-			given any partition \(\{1,2,\cdots,m\}=P_1\cup P_2\cup\cdots\cup P_r\),
-			there is an index \(j\in\{1,2,\cdots,r\}\) such that \(P_j\) contains an arithmetic progression of length \(k_j\).
-			We have computed exact values of some (30) previously unkown van der Waerden numbers 
-			and also computed lower bounds of others. 
-			Let \(w_d(r; k_1, k_2, \cdots, k_r)\) be the least \(m\) such that
-			given any partition \(\{1,2,\cdots,m\}=P_1\cup P_2\cup\cdots\cup P_r\),
-			there is an index \(j\in\{1,2,\cdots,r-1\}\) such that \(P_j\) contains an arithmetic progression of length \(k_j\), or 
-			\(P_r\) contains an arithmetic progression of length \(k_r\) with common difference at most \(d\).
-			A table of observed values of \(w_d(r; k_1, k_2, \cdots, k_r)\) for \(d=1,2,\cdots,\lfloor{m-1\over{k_r-1}}\rfloor\) is given. 													
-			
-							<br>
-							--- (See <a href=http://sourceforge.net/projects/tawsolver class=gen target=blank>tawSolver 1.0</a>:
-                                               an efficient implementation of the DPLL Algorithm.)
-                  </div>										
-		</li>
+		<hr>
+		<b>Some more van der Waerden numbers</b><br>
+			Tanbir Ahmed, <a href=https://cs.uwaterloo.ca/journals/JIS/ class=gen target=blank>Journal of Integer Sequences</a>, 
+		        <b>16</b> (2013), Article <a href=https://cs.uwaterloo.ca/journals/JIS/VOL16/Ahmed/ahmed2.pdf class=gen target=blank>13.4.4.</a>
+			<a href=http://www.ams.org/mathscinet-getitem?mr=3056628 class=gen target=blank>MR3056628</a>.	
+			<button type="button" class="btn btn-light" data-toggle="modal" data-target="#more_vdw">Abstract</button>
+		<hr>
+		<b>On computation of exact van der Waerden numbers</b><br>
+			Tanbir Ahmed, <a href=http://www.integers-ejcnt.org/ class=gen target=blank>Integers</a>, <b>12 (3)</b> (2012), 417-425.  
+			Online version: <a href=http://www.integers-ejcnt.org/vol11.html target=blank class=gen><b>11</b> (2011)</a>, A71.
+			<a href=http://www.ams.org/mathscinet-getitem?mr=2955523 class=gen target=blank>MR2955523</a>.
+			<button type="button" class="btn btn-light" data-toggle="modal" data-target="#exact_vdw">Abstract</button>
+		<hr>
+		<b>Two new van der Waerden numbers: w(2; 3, 17) and w(2; 3, 18)</b><br>
+			Tanbir Ahmed, <a href=http://www.integers-ejcnt.org/ class=gen target=blank>Integers</a>,
+		        <a href=http://www.integers-ejcnt.org/vol10.html target=blank class=gen><b>10</b> (2010)</a>, 369-377, A32.
+			<a href=http://www.ams.org/mathscinet-getitem?mr=2684128 class=gen target=blank>MR2684128</a>.
+			<button type="button" class="btn btn-light" data-toggle="modal" data-target="#2_vdw">Abstract</button>
+		<hr>
+		<b>Some new van der Waerden numbers and some van der Waerden-type numbers</b><br>
+			Tanbir Ahmed,  <a href=http://www.integers-ejcnt.org/ class=gen target=blank>Integers</a>,
+                        <a href=http://www.integers-ejcnt.org/vol9.html class=gen target=blank><b>9</b> (2009)</a>, 65-76, A06  
+			<a href=http://www.ams.org/mathscinet-getitem?mr=2506138 class=gen target=blank>MR2506138</a>.	
+			<button type="button" class="btn btn-light" data-toggle="modal" data-target="#30_vdw">Abstract</button>
+			<br>
+			--- (See <a href=http://sourceforge.net/projects/tawsolver class=gen target=blank>tawSolver 1.0</a>:
+			an efficient implementation of the DPLL Algorithm.)
+		<hr>
+			<ol reversed="n"">
                   <li>
                   Tanbir Ahmed, "Some Results in Extremal Combinatorics", 
 					       Ph.D. Thesis, 2013, Concordia University. 					       
