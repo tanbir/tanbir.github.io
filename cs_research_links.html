@@ -110,6 +110,8 @@
 			<p>The emergence of automated and semi-automated proof systems has transformed the way we approach mathematical problems. By integrating formal logic, combinatorics, and computational methods, we can tackle conjectures and problems that were previously out of reach. My research emphasizes <b>Formal Verification</b> that ensures the correctness of mathematical proofs and computational algorithms; and
 <b>Experimental Mathematics</b> that uses computation to uncover patterns, explore conjectures, and propose new theorems. This page serves as a curated resource for tools, techniques, and systems that contribute to this exciting area of study.</p>
 
+		<h5>SAT / SMT</h5>
+
 			<hr>	
 			<b>SAT / SMT Researchers</b><br>
 			Carlos Ansótegui
@@ -165,8 +167,28 @@
 			&bull; <a href="https://db.ipmu.jp/member/personal/2302en.html" target="_blank">Naoyuki Tamura</a>
 			&bull; <a href="https://logic.sysu.edu.cn/en/faculty/zhaoxishun" target="_blank">Xishun Zhao</a>
 			<hr>
-				
-			<b>ATP Researchers</b><br>
+		
+			<b>SAT / SMT solvers</b><br>
+			&bull; <a href="https://github.com/arminbiere/cadical" target="_blank">CaDiCaL</a>: A simplified and modern SAT solver designed for research and industrial applications.<br>
+			&bull; <a href="https://potassco.org/clasp/" target="_blank">Clasp</a>: A conflict-driven answer set solver for solving SAT problems and related logic programs.<br>
+			&bull; <a href="https://cvc5.github.io/" target="_blank">CVC5</a>: An advanced SMT solver with SAT-solving capabilities and support for theories like arithmetic and bit-vectors.<br>
+			&bull; <a href="https://github.com/msoos/cryptominisat" target="_blank">CryptoMiniSat</a>: A SAT solver optimized for cryptographic applications with advanced debugging tools.<br>
+			&bull; <a href="https://github.com/arminbiere/kissat" target="_blank">Kissat</a>: A high-performance SAT solver with scalability for industrial problems.<br>
+			&bull; <a href="https://maplesat.github.io/" target="_blank">MapleSAT</a>: A SAT solver that uses machine learning techniques to improve decision heuristics.<br>
+			&bull; <a href="http://minisat.se" target="_blank">MiniSat</a>: A lightweight and efficient SAT solver often used as a foundation for other solvers.<br>
+			&bull; <a href="http://fmv.jku.at/picosat/" target="_blank">PicoSAT</a>: A small and efficient SAT solver often used in teaching and experimentation.<br>
+			&bull; <a href="http://fmv.jku.at/precosat/" target="_blank">PrecoSAT</a>: A SAT solver designed to test experimental SAT-solving techniques.<br>
+			&bull; <a href="https://iccl.inf.tu-dresden.de/web/Riss/en" target="_blank">RISS</a>: A robust SAT solver with advanced preprocessing and inprocessing capabilities.<br>
+			&bull; <a href="http://sat4j.org/" target="_blank">SAT4J</a>: A Java-based SAT solver designed for embedding in Java applications.<br>
+			&bull; <a href="https://github.com/arminbiere/satch" target="_blank">SATCH</a>: A minimalistic SAT solver for educational and research purposes.<br>			
+			&bull; <a href="https://fmv.jku.at/splatz/" target="_blank">Splatz</a>: A SAT solver optimized for high scalability in industrial use cases.<br>
+			&bull; <a href="https://arminbiere.github.io/yalsat/" target="_blank">YalSAT</a>: A lightweight SAT solver using stochastic local search techniques.<br>
+			&bull; <a href="https://z3prover.github.io/" target="_blank">Z3</a>: A high-performance SMT and SAT solver developed by Microsoft Research for formal verification and symbolic reasoning.<br>
+			<br>
+
+			<h5>Interactive Theorem Provers</h5>		
+			<hr>		
+			<b>ITP Researchers</b><br>
 			<a href=https://www.andrew.cmu.edu/user/avigad/ target=blank>Jeremmy Avigad</a> &bull;			
 			<a href=https://www.imperial.ac.uk/people/k.buzzard target=blank>Kevin Buzzard</a> &bull;
 			<a href=https://en.wikipedia.org/wiki/Fran%C3%A7ois_Chollet target=blank>François Chollet</a> &bull;
@@ -176,15 +198,21 @@
 			<a href=https://www.cl.cam.ac.uk/~lp15/ target=blank>Larry Paulson</a> &bull;
 			<a href=https://research.google/people/ChristianSzegedy/ target=blank>Christian Szegedy</a> &bull;
 			<a href=https://people.ciirc.cvut.cz/~urbanjo3/ target=blank>Josef Urban</a>
-			<br>
+			<br>	
 		<hr>
-		<b>Proof assistants</b><br>
-			<a href=https://isabelle.in.tum.de/ target=blank>Isabelle</a> &bull;
-			<a href=https://coq.inria.fr/ target=blank>Coq</a> &bull;
-			<a href=https://www.cl.cam.ac.uk/~jrh13/hol-light/ target=blank>HOL Light </a> &bull;
-			<a href=https://us.metamath.org/ target=blank>Metamath </a> &bull;
-			<a href=https://leanprover-community.github.io/ target=blank>Lean Community</a> &bull;
-			<a href=https://http://mizar.org/ target=blank>Mizar</a> 
+		<b>Proof Assistants</b><br>
+			&bull; <a href="https://coq.inria.fr/" target="_blank">Coq</a>: A proof assistant for developing machine-checked proofs, focusing on typed functional programming and formal verification.<br>
+			&bull; <a href="https://hol-theorem-prover.org/" target="_blank">HOL4</a>: A theorem prover for higher-order logic, particularly useful in hardware and software verification.<br>
+			&bull; <a href="https://www.cl.cam.ac.uk/~jrh13/hol-light/" target="_blank">HOL Light</a>: A lightweight proof assistant for higher-order logic, known for its simplicity and focus on mathematical proofs.<br>
+			&bull; <a href="https://isabelle.in.tum.de/" target="_blank">Isabelle</a>: A generic interactive theorem prover supporting multiple logical formalisms, including higher-order logic.<br>
+			&bull; <a href="https://leanprover.github.io/" target="_blank">Lean</a>: An interactive proof assistant and programming language widely used for formal mathematics and theorem proving.<br>
+			&bull; <a href="https://ncatlab.org/nlab/show/NuPRL" target="_blank">NuPRL</a>: A proof development system supporting constructive type theory for formal mathematics and verification.<br>
+			&bull; <a href="https://proofgeneral.github.io/" target="_blank">Proof General</a>: A generic Emacs-based environment for interacting with proof assistants like Coq, Isabelle, and Lean.<br>
+			&bull; <a href="https://www.cs.ru.nl/~freek/100/" target="_blank">Mizar</a>: A proof assistant designed for formalizing mathematical knowledge and creating a library of formalized mathematics.<br>
+			&bull; <a href="https://www.cs.cmu.edu/~aldrich/SASyLF/" target="_blank">SASyLF</a>: A lightweight proof assistant designed for educational purposes and focusing on language theory and formal reasoning.<br>
+			&bull; <a href="https://www.why3.org/" target="_blank">Why3</a>: A platform for deductive program verification that integrates multiple proof assistants and SMT solvers.<br>
+			<br>
+
 		<hr>
 		<h5>Some articles on AI-assisted proofs</h5>
 			&bull; S. Chakraborty et al. (2025) <a href=https://arxiv.org/pdf/2405.01787 target=blank>Towards Neural Synthesis for SMT-assisted Proof-Oriented Programming</a>, 
